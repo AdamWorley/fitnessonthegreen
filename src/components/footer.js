@@ -5,7 +5,7 @@ export default function Layout() {
   return (
     <footer className="footer">
       <div className="content has-text-centered">
-        <p>
+        <p>&copy;2021 by Fitness on the Green |
           Created by{" "}
           <a href="https://adamworley.com" target="_blank" rel="noreferrer">
             Adam Worley
