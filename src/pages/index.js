@@ -79,12 +79,12 @@ const IndexPage = () => {
                 <div className="field">
                   <label className="label" htmlFor="address">Address</label>
                   <div className="control has-icons-left has-icons-right">
-                    <input id="address" className="input is-success" type="text" placeholder="Address" value="" />
+                    <input id="address" className="input is-success" type="text" placeholder="Address" />
                     <span className="icon is-small is-left">
                       <i className="fas fa-user"></i>
                     </span>
                     <span className="icon is-small is-right">
-                      <i className="fas fa-check"></i>
+                      {/* <i className="fas fa-check"></i> */}
                     </span>
                   </div>
                 </div>
@@ -92,33 +92,33 @@ const IndexPage = () => {
                 <div className="field">
                   <label className="label" htmlFor="email">Email</label>
                   <div className="control has-icons-left has-icons-right">
-                    <input id="email" className="input is-danger" type="email" placeholder="Email Address" value="" />
+                    <input id="email" className="input" type="email" placeholder="Email Address" />
                     <span className="icon is-small is-left">
                       <i className="fas fa-envelope"></i>
                     </span>
                     <span className="icon is-small is-right">
-                      <i className="fas fa-exclamation-triangle"></i>
+                      {/* <i className="fas fa-exclamation-triangle"></i> */}
                     </span>
                   </div>
-                  <p className="help is-danger">This email is invalid</p>
+                  {/* <p className="help">This email is invalid</p> */}
                 </div>
                 <div className="field">
                   <label className="label" htmlFor="phone">Phone</label>
                   <div className="control has-icons-left has-icons-right">
-                    <input id="phone" className="input is-danger" type="email" placeholder="01293 xxxxxx" value="" />
+                    <input id="phone" className="input" type="email" placeholder="01293 xxxxxx" />
                     <span className="icon is-small is-left">
                       <i className="fas fa-phone"></i>
                     </span>
                     <span className="icon is-small is-right">
-                      <i className="fas fa-exclamation-triangle"></i>
+                      {/* <i className="fas fa-exclamation-triangle"></i> */}
                     </span>
                   </div>
-                  <p className="help is-danger">This email is invalid</p>
+                  {/* <p className="help">This email is invalid</p> */}
                 </div>
 
                 <div className="field">
                   <label className="label" htmlFor="subject">Subject</label>
-                  <input id="subject "className="input" type="text" placeholder="Subject" value="" />
+                  <input id="subject "className="input" type="text" placeholder="Subject" />
                 </div>
 
                 <div className="field">
