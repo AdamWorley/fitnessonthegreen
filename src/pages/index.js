@@ -105,7 +105,7 @@ const IndexPage = () => {
                 <div className="field">
                   <label className="label" htmlFor="phone">Phone</label>
                   <div className="control has-icons-left has-icons-right">
-                    <input id="phone" className="input" type="email" placeholder="01293 xxxxxx" />
+                    <input id="phone" className="input" type="tel" placeholder="01293 xxxxxx" />
                     <span className="icon is-small is-left">
                       <i className="fas fa-phone"></i>
                     </span>
