@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: "fitnessonthegreen",
-    siteUrl: "https://www.yourdomain.tld",
-    url: "https://www.mindmapuk.com",
-    description: "Something Creative",
+    siteUrl: "https://www.fitonthegreen.co.uk",
+    url: "https://www.fitonthegreen.co.uk",
+    description: "YOUR FITNESS JOURNEY BROUGHT TO YOU LOCALLY",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -34,6 +34,12 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: "gatsby-plugin-react-leaflet",
+      options: {
+        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
+      },
     },
   ],
 };
