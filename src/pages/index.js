@@ -2,7 +2,16 @@ import * as React from "react"
 import "../styles/main.scss";
 import { Layout, Navbar } from "../components";
 // import { Link } from "gatsby";
-import aboutPic from "../images/Major_series.webp";
+import { StaticImage } from "gatsby-plugin-image"
+import weights from "../images/weights.webp";
+import henchJane from "../images/henchJane.webp";
+import outdoorFitness from "../images/outdoorFitness.webp";
+
+const services = [
+  {title: "Online Coaching", image: {src:weights, alt: "Dumbbells"}, days: [], runtime: 1 ,price: ""},
+  {title: "Bootcamp", image: {src:outdoorFitness, alt: "People exercising outside"}, days: ["Wed, Sat, Sun"], runtime: 1, price: "Price varies"},
+  {title: "One-off 1-2-1 Personal Training", image: {src:henchJane, alt: "Jane being hench"}, days: [], runtime: 1, price: ""},
+]
 
 const IndexPage = () => {
   return (
@@ -10,22 +19,13 @@ const IndexPage = () => {
       <section className="hero is-primary">
         <div className="hero-head"><Navbar /></div>
         <div className="hero-body is-secondary">
-          <div className="columns">
+          <div className="columns is-vcentered">
             <div className="column ">
-              <figure className="image is-16by9">
-                <iframe
-                  title="Welcome Video"
-                  className="has-ratio"
-                  width="640"
-                  height="360"
-                  src="https://www.youtube-nocookie.com/embed/YE7VzlLtp-4"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
+              <figure className="image parallax">
+                <StaticImage src="../images/outdoorFitness.webp" alt="" />
               </figure>
             </div>
-            <div className="column content">
+            <div className="column content is-half">
               <p className="title is-accent">
                 YOUR FITNESS JOURNEY BROUGHT TO YOU LOCALLY
               </p>
@@ -41,11 +41,11 @@ const IndexPage = () => {
       <main>
         <section id="about" className="section">
           <section id="about">
-            <div className="columns">
-              <div className="column">
-                <h2 className="title">About</h2>
-                <figure className="image is-128x128 is-align-content-center">
-                  <img className="is-rounded" src={aboutPic} alt="Jane and Luke" />
+            <div className="columns is-centered">
+              <div className="column is-half">
+                <h2 className="title is-centered">About</h2>
+                <figure className="image is-128x128">
+                  <StaticImage className="is-rounded" src="../images/Major_series.webp" alt="Jane and Luke" />
                 </figure>
                 <p>Looking for professional, certified fitness coaches that can offer you a tailor-made plan that is right for you?
                   Or perhaps you're looking to meet some locals whilst training in the fresh outdoors, come rain or shine?
@@ -55,9 +55,9 @@ const IndexPage = () => {
             </div>
           </section>
         </section>
-        <section id="contact" className="section">
-          <div className="columns m-4">
-            <div className="column">
+        <section id="contact" className="section m-5">
+          <div className="columns m-4 is-vcentered">
+            <div className="column is-half">
               <h2 className="title">Get Started</h2>
               <p>The Green at Woodgate<br />
                 Woodgate<br />
@@ -66,17 +66,20 @@ const IndexPage = () => {
                 RH11 9GX</p>
             </div>
             <div className="column">
-              <form>
+              <form name="contact"
+                    method="post"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field">
                 <div className="field">
-                  <label className="label">Name</label>
+                  <label className="label" htmlFor="name">Name</label>
                   <div className="control">
-                    <input className="input" type="text" placeholder="Enter your name" />
+                    <input id="name" className="input" type="text" placeholder="Enter your name" />
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label">Address</label>
+                  <label className="label" htmlFor="address">Address</label>
                   <div className="control has-icons-left has-icons-right">
-                    <input className="input is-success" type="text" placeholder="Address" value="" />
+                    <input id="address" className="input is-success" type="text" placeholder="Address" value="" />
                     <span className="icon is-small is-left">
                       <i className="fas fa-user"></i>
                     </span>
@@ -87,9 +90,9 @@ const IndexPage = () => {
                 </div>
 
                 <div className="field">
-                  <label className="label">Email</label>
+                  <label className="label" htmlFor="email">Email</label>
                   <div className="control has-icons-left has-icons-right">
-                    <input className="input is-danger" type="email" placeholder="Email Address" value="" />
+                    <input id="email" className="input is-danger" type="email" placeholder="Email Address" value="" />
                     <span className="icon is-small is-left">
                       <i className="fas fa-envelope"></i>
                     </span>
@@ -100,9 +103,9 @@ const IndexPage = () => {
                   <p className="help is-danger">This email is invalid</p>
                 </div>
                 <div className="field">
-                  <label className="label">Phone</label>
+                  <label className="label" htmlFor="phone">Phone</label>
                   <div className="control has-icons-left has-icons-right">
-                    <input className="input is-danger" type="email" placeholder="01293 xxxxxx" value="" />
+                    <input id="phone" className="input is-danger" type="email" placeholder="01293 xxxxxx" value="" />
                     <span className="icon is-small is-left">
                       <i className="fas fa-phone"></i>
                     </span>
@@ -114,29 +117,20 @@ const IndexPage = () => {
                 </div>
 
                 <div className="field">
-                  <label className="label">Subject</label>
-                  <input className="input" type="text" placeholder="Subject" value="" />
+                  <label className="label" htmlFor="subject">Subject</label>
+                  <input id="subject "className="input" type="text" placeholder="Subject" value="" />
                 </div>
 
                 <div className="field">
-                  <label className="label">Message</label>
+                  <label className="label" htmlFor="message">Message</label>
                   <div className="control">
-                    <textarea className="textarea" placeholder="Message..."></textarea>
+                    <textarea id="message" className="textarea" placeholder="Message..."></textarea>
                   </div>
                 </div>
-                {/* 
-                <div className="field">
-                  <div className="control">
-                    <label className="checkbox">
-                      <input type="checkbox" />
-                      I agree to the <a href="#">terms and conditions</a>
-                    </label>
-                  </div>
-                </div> */}
 
                 <div className="field is-grouped">
                   <div className="control">
-                    <button className="button">Submit</button>
+                    <button className="button" type="submit" value="Submit">Submit</button>
                   </div>
                 </div>
               </form>
@@ -144,6 +138,33 @@ const IndexPage = () => {
             </div>
           </div>
         </section>
+          <section className="section">
+            <ul>
+        {services.map((service) => {
+          const {title, runtime, price} = service;
+          const {src, alt} = service.image;
+          return (
+            
+            <div class="card">
+              <div className="card-image">
+                <figure className="image is-128x128"><img src={src} alt={alt} /></figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-4">{title}</p>
+                    <p class="subtitle is-6">{runtime}</p>
+                  </div>
+                </div>
+                <div class="content">
+                  {price}
+                </div>
+              </div>
+            </div>
+          )
+        })}
+      </ul>
+      </section>
       </main>
     </Layout>
   )
