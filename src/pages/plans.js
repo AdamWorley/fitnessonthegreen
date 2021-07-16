@@ -1,16 +1,17 @@
-import * as React from "react"
+import * as React from "react";
 import "../styles/main.scss";
-import { Layout, Navbar } from "../components";
+import { Layout, Navbar, Services } from "../components";
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Navbar/>
+      <Navbar />
       <main className="section">
-          <h1 className="title is-primary">Plans &amp; Services</h1>
+        <h1 className="title is-primary">Plans &amp; Services</h1>
+        <Services />
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
