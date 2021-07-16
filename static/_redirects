@@ -1,0 +1,5 @@
+# Netlify redirects file, edit with your domain
+# https://www.netlify.com/docs/redirects/
+
+https://fitonthegreen.co.uk//*      https://fitonthegreen.co.uk/:splat    301!
+http://fitonthegreen.co.uk/*       http://fitonthegreen.co.uk/:splat    301!
