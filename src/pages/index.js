@@ -55,11 +55,11 @@ const IndexPage = () => {
               <p className="title is-family-secondary has-text-centered is-accent">
                 YOUR FITNESS JOURNEY BROUGHT TO YOU LOCALLY
               </p>
-              <p className="subtitle has-text-centered">
+              <p className="subtitle has-text-centered content">
                 Are you looking for a place to train that's walking distance
                 from your home in Pease Pottage?
                 <br />
-                Are you tired of fighting for gym equipment at you local gym?
+                Are you tired of fighting for gym equipment at your local gym?
                 <br />
                 Are you looking to meet some locals whilst getting fit?
                 <br />
@@ -77,23 +77,23 @@ const IndexPage = () => {
             <div className="columns is-centered">
               <div className="column is-half has-text-centered">
                 <h2 className="title ">About</h2>
-                <figure className="image is-128x128">
+                <figure className="image is-128x128 center">
                   <StaticImage
                     imgClassName="is-rounded"
                     src="../images/Major_series.webp"
                     alt="Jane and Luke"
                   />
                 </figure>
-                <p>
+                <p className="content">
                   Looking for professional, certified fitness coaches that can
-                  offer you a tailor-made plan that is right for you? Or perhaps
-                  you're looking to meet some locals whilst training in the
-                  fresh outdoors, come rain or shine? With almost 20 years
-                  combined experience in fitness, Luke and Jane will help you
-                  reach your goals be it: longevity, health, fat loss, muscle
-                  gain, performance, fitness, nutrition (and more!) through
-                  sharing knowledge, correction of technique and structured
-                  training to maximise your results.
+                  offer you a tailor-made plan that is right for you? <br />
+                  Or perhaps you're looking to meet some locals whilst training
+                  in the fresh outdoors, come rain or shine? <br />
+                  With almost 20 years combined experience in fitness, Luke and
+                  Jane will help you reach your goals be it: longevity, health,
+                  fat loss, muscle gain, performance, fitness, nutrition (and
+                  more!) through sharing knowledge, correction of technique and
+                  structured training to maximise your results.
                 </p>
                 <button className="button">Contact</button>
               </div>
