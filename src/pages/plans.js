@@ -7,7 +7,7 @@ const IndexPage = () => {
     <Layout>
       <Navbar />
       <main className="section">
-        <h1 className="title is-primary">Plans &amp; Services</h1>
+        <h1 className="title has-text-light">Plans &amp; Services</h1>
         <Services />
       </main>
     </Layout>

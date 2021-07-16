@@ -7,7 +7,7 @@ const IndexPage = () => {
     <Layout>
       <Navbar />
       <main className="section">
-        <h1 className="title">Contact</h1>
+        <h1 className="title has-text-light">Contact</h1>
         <Contact />
       </main>
     </Layout>
