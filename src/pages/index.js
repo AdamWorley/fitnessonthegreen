@@ -67,7 +67,7 @@ const IndexPage = () => {
             </div>
             <div className="column">
               <form name="contact"
-                    method="post"
+                    method="POST"
                     data-netlify="true"
                     data-netlify-honeypot="bot-field">
                       <input type="hidden" name="form-name" value="contact" />
@@ -131,7 +131,7 @@ const IndexPage = () => {
 
                 <div className="field is-grouped">
                   <div className="control">
-                    <button className="button" type="submit" value="Submit">Submit</button>
+                    <button className="button" type="submit">Submit</button>
                   </div>
                 </div>
               </form>
