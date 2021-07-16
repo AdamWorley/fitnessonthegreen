@@ -5,6 +5,9 @@ $font-stack: Helvetica, sans-serif;
 
 // Bulma variables
 $family-primary: $font-stack;
+
+$family-secondary: "forum", serif;
+
 // $title-color: $blue;
 $primary: #151c25;
 $background: #27475b;
@@ -67,15 +70,10 @@ $body-background-color: $background;
   display: none;
 }
 
+.card {
+  height: 100%;
+}
+
 #about {
   background-color: $accent;
-}
-
-#contact {
-  background-color: $white;
-  color: $black;
-}
-
-nav {
-  margin-bottom: 2rem;
 }
