@@ -138,6 +138,7 @@ const IndexPage = () => {
                       className="input"
                       type="text"
                       placeholder="Enter your name"
+                      required
                     />
                   </div>
                 </div>
@@ -171,6 +172,7 @@ const IndexPage = () => {
                       className="input"
                       type="email"
                       placeholder="Email Address"
+                      required
                     />
                     <span className="icon is-small is-left">
                       <i className="fas fa-envelope"></i>
@@ -211,6 +213,7 @@ const IndexPage = () => {
                     className="input"
                     type="text"
                     placeholder="Subject"
+                    required
                   />
                 </div>
 
@@ -223,6 +226,7 @@ const IndexPage = () => {
                       id="message"
                       className="textarea"
                       placeholder="Message..."
+                      required
                     ></textarea>
                   </div>
                 </div>
