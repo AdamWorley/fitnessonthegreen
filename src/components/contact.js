@@ -21,7 +21,7 @@ export default function Contact() {
             <br />
             RH11 9GX
           </p>
-          <div>
+          {/* <div>
             {typeof window !== "undefined" && (
               <MapContainer
                 center={[51.08398886601107, -0.1929794649752272]}
@@ -37,7 +37,7 @@ export default function Contact() {
                 </Marker>
               </MapContainer>
             )}
-          </div>
+          </div> */}
         </div>
         <div className="column">
           <form
