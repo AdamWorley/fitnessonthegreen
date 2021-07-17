@@ -90,7 +90,7 @@ export default function Contact() {
             </p>
             <p>
               <label className="label">
-                Your name:
+                Name
                 <br />
                 <input
                   className="input"
@@ -102,7 +102,19 @@ export default function Contact() {
             </p>
             <p>
               <label className="label">
-                Your email:
+                Address
+                <br />
+                <input
+                  className="input"
+                  type="text"
+                  name="address"
+                  onChange={handleChange}
+                />
+              </label>
+            </p>
+            <p>
+              <label className="label">
+                Email
                 <br />
                 <input
                   className="input"
@@ -114,7 +126,19 @@ export default function Contact() {
             </p>
             <p>
               <label className="label">
-                Subject:
+                Phone
+                <br />
+                <input
+                  className="input"
+                  type="tel"
+                  name="phone"
+                  onChange={handleChange}
+                />
+              </label>
+            </p>
+            <p>
+              <label className="label">
+                Subject
                 <br />
                 <input
                   className="input"
@@ -126,10 +150,10 @@ export default function Contact() {
             </p>
             <p>
               <label className="label">
-                Message:
+                Message
                 <br />
                 <textarea
-                  className="input"
+                  className="textarea"
                   name="message"
                   onChange={handleChange}
                 />
