@@ -1,6 +1,7 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Layout() {
   function toggleBurgerMenu() {
@@ -14,17 +15,16 @@ export default function Layout() {
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <StaticImage
-              src="../images/logo-small.png"
+              src="../images/header-small.png"
               loading="eager"
               alt="Logo"
-              width={250}
-              height={105}
+              width={500}
+              height={167}
               placeholder="blurred"
               layout="constrained"
-              imgClassName="image"
+              // imgClassName="image"
             />
           </Link>
-          Fitness On The Green
           <button
             className="navbar-burger button is-text"
             data-target="navbarMenuHero"
@@ -67,6 +67,13 @@ export default function Layout() {
             >
               Testimonials
             </Link> */}
+              <a
+                href="http://www.instagram.com/jane.zanganeh"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaInstagram />
+              </a>
             </div>
           </div>
         </div>
