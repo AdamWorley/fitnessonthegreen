@@ -6,7 +6,7 @@ import outdoorFitness from "../images/outdoorFitness.webp";
 const services = [
   {
     title: "Online Coaching",
-    image: { src: weights, alt: "Dumbbells" },
+    img: { src: weights, alt: "Dumbbells", width: 400, height: 400 },
     days: [],
     runtime: 1,
     price: "",
@@ -16,7 +16,12 @@ const services = [
   },
   {
     title: "Bootcamp",
-    image: { src: outdoorFitness, alt: "People exercising outside" },
+    img: {
+      src: outdoorFitness,
+      alt: "People exercising outside",
+      width: 400,
+      height: 400,
+    },
     days: ["Wed, Sat, Sun"],
     runtime: 1,
     price: "Price varies",
@@ -27,7 +32,7 @@ const services = [
   },
   {
     title: "One-off 1-2-1 Personal Training",
-    image: { src: henchJane, alt: "Jane being hench" },
+    img: { src: henchJane, alt: "Jane being hench", width: 400, height: 400 },
     days: [],
     runtime: 1,
     price: "",
@@ -44,13 +49,13 @@ const Services = () => {
         <div className="columns is-centered">
           {services.map((service) => {
             const { title, runtime, price, description, url } = service;
-            const { src, alt } = service.image;
+            const { src, alt, width, height } = service.img;
             return (
               <div className="column is-4">
                 <div className="card">
                   <div className="card-image">
                     <figure className="image">
-                      <img src={src} alt={alt} />
+                      <img src={src} alt={alt} width={width} height={height} />
                     </figure>
                   </div>
                   <div className="card-content">
