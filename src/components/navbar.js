@@ -42,21 +42,21 @@ export default function Layout() {
               <Link
                 className="navbar-item button is-primary"
                 to="/"
-                activeClassName={"is-outlined"}
+                activeClassName="has-white-text"
               >
                 Home
               </Link>
               <Link
                 className="navbar-item button is-primary"
                 to="/plans"
-                activeClassName={"is-outlined"}
+                activeClassName="has-white-text"
               >
                 Plans &amp; Services
               </Link>
               <Link
                 className="navbar-item button is-primary"
                 to="/contact"
-                activeClassName={"is-outlined"}
+                activeClassName="has-white-text"
               >
                 Contact
               </Link>
@@ -71,6 +71,7 @@ export default function Layout() {
                 href="http://www.instagram.com/jane.zanganeh"
                 target="_blank"
                 rel="noreferrer"
+                className="is-outline has-white-text"
               >
                 <FaInstagram />
               </a>
