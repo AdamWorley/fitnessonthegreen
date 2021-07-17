@@ -84,8 +84,6 @@ export default function Contact() {
             <div className="field">
               <label className="label" htmlFor="name">
                 Name
-              </label>
-              <div className="control">
                 <input
                   id="name"
                   className="input"
@@ -94,13 +92,12 @@ export default function Contact() {
                   required
                   onChange={handleChange}
                 />
-              </div>
+              </label>
+              <div className="control"></div>
             </div>
             <div className="field">
               <label className="label" htmlFor="address">
                 Address
-              </label>
-              <div className="control has-icons-left has-icons-right">
                 <input
                   id="address"
                   className="input is-success"
@@ -108,6 +105,8 @@ export default function Contact() {
                   placeholder="Address"
                   onChange={handleChange}
                 />
+              </label>
+              <div className="control has-icons-left has-icons-right">
                 <span className="icon is-small is-left">
                   <i className="fas fa-user"></i>
                 </span>
@@ -120,8 +119,6 @@ export default function Contact() {
             <div className="field">
               <label className="label" htmlFor="email">
                 Email
-              </label>
-              <div className="control has-icons-left has-icons-right">
                 <input
                   id="email"
                   className="input"
@@ -130,6 +127,8 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                 />
+              </label>
+              <div className="control has-icons-left has-icons-right">
                 <span className="icon is-small is-left">
                   <i className="fas fa-envelope"></i>
                 </span>
@@ -142,8 +141,6 @@ export default function Contact() {
             <div className="field">
               <label className="label" htmlFor="phone">
                 Phone
-              </label>
-              <div className="control has-icons-left has-icons-right">
                 <input
                   id="phone"
                   className="input"
@@ -151,6 +148,8 @@ export default function Contact() {
                   placeholder="01293 xxxxxx"
                   onChange={handleChange}
                 />
+              </label>
+              <div className="control has-icons-left has-icons-right">
                 <span className="icon is-small is-left">
                   <i className="fas fa-phone"></i>
                 </span>
@@ -164,30 +163,30 @@ export default function Contact() {
             <div className="field">
               <label className="label" htmlFor="subject">
                 Subject
+                <input
+                  id="subject "
+                  className="input"
+                  type="text"
+                  placeholder="Subject"
+                  onChange={handleChange}
+                  required
+                />
               </label>
-              <input
-                id="subject "
-                className="input"
-                type="text"
-                placeholder="Subject"
-                onChange={handleChange}
-                required
-              />
             </div>
 
             <div className="field">
               <label className="label" htmlFor="message">
                 Message
+                <div className="control">
+                  <textarea
+                    id="message"
+                    className="textarea"
+                    placeholder="Message..."
+                    onChange={handleChange}
+                    required
+                  ></textarea>
+                </div>
               </label>
-              <div className="control">
-                <textarea
-                  id="message"
-                  className="textarea"
-                  placeholder="Message..."
-                  onChange={handleChange}
-                  required
-                ></textarea>
-              </div>
             </div>
 
             <div className="field is-grouped">
