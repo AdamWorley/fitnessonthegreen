@@ -104,6 +104,13 @@ export default function Contact() {
             </p>
             <p>
               <label>
+                Subject:
+                <br />
+                <input type="text" name="subject" onChange={handleChange} />
+              </label>
+            </p>
+            <p>
+              <label>
                 Message:
                 <br />
                 <textarea name="message" onChange={handleChange} />
