@@ -13,7 +13,13 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/logo.png",
+        name: `Fitness on The Green`,
+        short_name: `Fitness on The Green`,
+        start_url: `/`,
+        background_color: `#27475b`,
+        theme_color: `#151c25`,
+        display: `standalone`,
       },
     },
     "gatsby-plugin-mdx",
