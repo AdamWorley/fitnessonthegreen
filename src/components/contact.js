@@ -1,7 +1,35 @@
 import React from "react";
+import { navigate } from "gatsby-link";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default function Contact() {
+  const [state, setState] = React.useState({});
+
+  const handleChange = (e) => {
+    setState({ ...state, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute("action")))
+      .catch((error) => alert(error));
+  };
+
   return (
     <section
       id="contact"
@@ -9,6 +37,10 @@ export default function Contact() {
     >
       <div className="columns m-4 is-vcentered">
         <div className="column is-half">
+          {/* <h2 className="title">Contact</h2>
+          <p>
+            Tel: <a href="tel:07498321545">07498 321545</a>
+          </p> */}
           <h2 className="title">Get Started</h2>
           <p>
             The Green at Woodgate
@@ -42,10 +74,11 @@ export default function Contact() {
         <div className="column">
           <form
             name="contact"
-            method="POST"
-            data-netlify="true"
+            method="post"
             action="/"
+            data-netlify="true"
             data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit}
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="field">
@@ -59,6 +92,7 @@ export default function Contact() {
                   type="text"
                   placeholder="Enter your name"
                   required
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -72,6 +106,7 @@ export default function Contact() {
                   className="input is-success"
                   type="text"
                   placeholder="Address"
+                  onChange={handleChange}
                 />
                 <span className="icon is-small is-left">
                   <i className="fas fa-user"></i>
@@ -92,6 +127,7 @@ export default function Contact() {
                   className="input"
                   type="email"
                   placeholder="Email Address"
+                  onChange={handleChange}
                   required
                 />
                 <span className="icon is-small is-left">
@@ -113,6 +149,7 @@ export default function Contact() {
                   className="input"
                   type="tel"
                   placeholder="01293 xxxxxx"
+                  onChange={handleChange}
                 />
                 <span className="icon is-small is-left">
                   <i className="fas fa-phone"></i>
@@ -133,6 +170,7 @@ export default function Contact() {
                 className="input"
                 type="text"
                 placeholder="Subject"
+                onChange={handleChange}
                 required
               />
             </div>
@@ -146,6 +184,7 @@ export default function Contact() {
                   id="message"
                   className="textarea"
                   placeholder="Message..."
+                  onChange={handleChange}
                   required
                 ></textarea>
               </div>
