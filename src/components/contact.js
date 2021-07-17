@@ -80,122 +80,91 @@ export default function Contact() {
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
+            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
-            <div className="field">
-              <label className="label" htmlFor="name">
+            <p hidden>
+              <label className="label">
+                Don’t fill this out:{" "}
+                <input name="bot-field" onChange={handleChange} />
+              </label>
+            </p>
+            <p>
+              <label className="label">
                 Name
+                <br />
                 <input
-                  id="name"
                   className="input"
                   type="text"
-                  placeholder="Enter your name"
-                  required
+                  name="name"
                   onChange={handleChange}
                 />
               </label>
-              <div className="control"></div>
-            </div>
-            <div className="field">
-              <label className="label" htmlFor="address">
+            </p>
+            <p>
+              <label className="label">
                 Address
+                <br />
                 <input
-                  id="address"
-                  className="input is-success"
+                  className="input"
                   type="text"
-                  placeholder="Address"
+                  name="address"
                   onChange={handleChange}
                 />
               </label>
-              <div className="control has-icons-left has-icons-right">
-                <span className="icon is-small is-left">
-                  <i className="fas fa-user"></i>
-                </span>
-                <span className="icon is-small is-right">
-                  {/* <i className="fas fa-check"></i> */}
-                </span>
-              </div>
-            </div>
-
-            <div className="field">
-              <label className="label" htmlFor="email">
+            </p>
+            <p>
+              <label className="label">
                 Email
+                <br />
                 <input
-                  id="email"
                   className="input"
                   type="email"
-                  placeholder="Email Address"
+                  name="email"
                   onChange={handleChange}
-                  required
                 />
               </label>
-              <div className="control has-icons-left has-icons-right">
-                <span className="icon is-small is-left">
-                  <i className="fas fa-envelope"></i>
-                </span>
-                <span className="icon is-small is-right">
-                  {/* <i className="fas fa-exclamation-triangle"></i> */}
-                </span>
-              </div>
-              {/* <p className="help">This email is invalid</p> */}
-            </div>
-            <div className="field">
-              <label className="label" htmlFor="phone">
+            </p>
+            <p>
+              <label className="label">
                 Phone
+                <br />
                 <input
-                  id="phone"
                   className="input"
                   type="tel"
-                  placeholder="01293 xxxxxx"
+                  name="phone"
                   onChange={handleChange}
                 />
               </label>
-              <div className="control has-icons-left has-icons-right">
-                <span className="icon is-small is-left">
-                  <i className="fas fa-phone"></i>
-                </span>
-                <span className="icon is-small is-right">
-                  {/* <i className="fas fa-exclamation-triangle"></i> */}
-                </span>
-              </div>
-              {/* <p className="help">This email is invalid</p> */}
-            </div>
-
-            <div className="field">
-              <label className="label" htmlFor="subject">
+            </p>
+            <p>
+              <label className="label">
                 Subject
+                <br />
                 <input
-                  id="subject "
                   className="input"
                   type="text"
-                  placeholder="Subject"
+                  name="subject"
                   onChange={handleChange}
-                  required
                 />
               </label>
-            </div>
-
-            <div className="field">
-              <label className="label" htmlFor="message">
+            </p>
+            <p>
+              <label className="label">
                 Message
-                <div className="control">
-                  <textarea
-                    id="message"
-                    className="textarea"
-                    placeholder="Message..."
-                    onChange={handleChange}
-                    required
-                  ></textarea>
-                </div>
+                <br />
+                <textarea
+                  className="textarea"
+                  name="message"
+                  onChange={handleChange}
+                />
               </label>
-            </div>
-
-            <div className="field is-grouped">
-              <div className="control">
-                <button className="button is-primary" type="submit">
-                  Submit
-                </button>
-              </div>
-            </div>
+            </p>
+            <br />
+            <p>
+              <button className="button is-primary" type="submit">
+                Send
+              </button>
+            </p>
           </form>
         </div>
       </div>
