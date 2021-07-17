@@ -15,14 +15,14 @@ export default function Layout() {
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <StaticImage
-              src="../images/header-small.png"
+              src="../images/header-nav.png"
               loading="eager"
               alt="Logo"
               width={500}
               height={167}
               placeholder="blurred"
               layout="constrained"
-              // imgClassName="image"
+              imgClassName="image"
             />
           </Link>
           <button
