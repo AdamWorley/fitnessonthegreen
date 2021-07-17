@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "fitnessonthegreen",
+    title: "Fitness on The Green",
     siteUrl: "https://www.fitonthegreen.co.uk",
     url: "https://www.fitonthegreen.co.uk",
     description: "YOUR FITNESS JOURNEY BROUGHT TO YOU LOCALLY",
