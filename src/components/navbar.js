@@ -18,8 +18,8 @@ export default function Layout() {
               src="../images/header-nav.png"
               loading="eager"
               alt="Logo"
-              width={500}
-              height={167}
+              width={300}
+              height={100}
               placeholder="blurred"
               layout="constrained"
               imgClassName="image"
