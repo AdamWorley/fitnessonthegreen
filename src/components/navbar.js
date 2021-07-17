@@ -27,7 +27,7 @@ export default function Layout() {
           </Link>
           <button
             className="navbar-burger button is-text"
-            data-target="navbarMenuHero"
+            data-target="navbarMenu"
             onClick={toggleBurgerMenu}
             aria-label="menu"
           >
@@ -36,7 +36,7 @@ export default function Layout() {
             <span></span>
           </button>
         </div>
-        <div id="navbarMenuHero" className="navbar-menu">
+        <div id="navbarMenu" className="navbar-menu">
           <div className="navbar-end">
             <div className="buttons">
               <Link
@@ -71,7 +71,7 @@ export default function Layout() {
                 href="http://www.instagram.com/jane.zanganeh"
                 target="_blank"
                 rel="noreferrer"
-                className="is-outline has-white-text"
+                className="button is-primary has-white-text"
               >
                 <FaInstagram />
               </a>
