@@ -12,6 +12,7 @@ const services = [
     price: "",
     description:
       "Something about online coaching: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt, at fugit suscipit vero temporibus. Nihil doloremque, veritatis tempore vero ad corporis. Aliquid velit ullam voluptatum, nemo aperiam possimus assumenda.",
+    url: "",
   },
   {
     title: "Bootcamp",
@@ -21,6 +22,8 @@ const services = [
     price: "Price varies",
     description:
       "Something about bootcamp: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt, at fugit suscipit vero temporibus. Nihil doloremque, veritatis tempore vero ad corporis. Aliquid velit ullam voluptatum, nemo aperiam possimus assumenda.",
+    // url: "http://my.setmore.com/bookingpage/71a5ece2-2c43-458c-bcab-73b4cc97a55e/class/591edd76-64b3-4839-b6a6-3bada6169586",
+    url: "",
   },
   {
     title: "One-off 1-2-1 Personal Training",
@@ -30,33 +33,44 @@ const services = [
     price: "",
     description:
       "Something about One-off 1-2-1 Personal Training: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt, at fugit suscipit vero temporibus. Nihil doloremque, veritatis tempore vero ad corporis. Aliquid velit ullam voluptatum, nemo aperiam possimus assumenda.",
+    url: "",
   },
 ];
 
-export default function Services() {
+const Services = () => {
   return (
     <section className="section container">
-      <div class="container has-text-centered">
-        <div class="columns is-centered">
+      <div className="container has-text-centered">
+        <div className="columns is-centered">
           {services.map((service) => {
-            const { title, runtime, price, description } = service;
+            const { title, runtime, price, description, url } = service;
             const { src, alt } = service.image;
             return (
-              <div class="column is-4">
-                <div class="card">
+              <div className="column is-4">
+                <div className="card">
                   <div className="card-image">
                     <figure className="image">
                       <img src={src} alt={alt} />
                     </figure>
                   </div>
-                  <div class="card-content">
+                  <div className="card-content">
                     <h2 className="title is-3">{title}</h2>
                     <h3 className="subtitle is-4">
                       Runtime: {runtime}hrs
                       <br />
                       {price}
                     </h3>
-                    <p class="is-success">{description}</p>
+                    <p className="is-success">{description}</p>
+                    {url !== undefined && url !== "" && (
+                      <a
+                        className="button is-primary"
+                        href={url}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Book Now
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -66,4 +80,6 @@ export default function Services() {
       </div>
     </section>
   );
-}
+};
+
+export default Services;
