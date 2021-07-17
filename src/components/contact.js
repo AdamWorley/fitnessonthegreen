@@ -1,6 +1,5 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-// import { useHasMounted } from "gatsby-theme-catalyst-core";
 
 export default function Contact() {
   return (
