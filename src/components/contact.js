@@ -83,13 +83,13 @@ export default function Contact() {
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
             <p hidden>
-              <label>
+              <label className="label">
                 Don’t fill this out:{" "}
                 <input name="bot-field" onChange={handleChange} />
               </label>
             </p>
             <p>
-              <label>
+              <label className="label">
                 Your name:
                 <br />
                 <input
@@ -101,7 +101,7 @@ export default function Contact() {
               </label>
             </p>
             <p>
-              <label>
+              <label className="label">
                 Your email:
                 <br />
                 <input
@@ -113,7 +113,7 @@ export default function Contact() {
               </label>
             </p>
             <p>
-              <label>
+              <label className="label">
                 Subject:
                 <br />
                 <input
@@ -125,7 +125,7 @@ export default function Contact() {
               </label>
             </p>
             <p>
-              <label>
+              <label className="label">
                 Message:
                 <br />
                 <textarea
