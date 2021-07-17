@@ -92,30 +92,50 @@ export default function Contact() {
               <label>
                 Your name:
                 <br />
-                <input type="text" name="name" onChange={handleChange} />
+                <input
+                  className="input"
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                />
               </label>
             </p>
             <p>
               <label>
                 Your email:
                 <br />
-                <input type="email" name="email" onChange={handleChange} />
+                <input
+                  className="input"
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                />
               </label>
             </p>
             <p>
               <label>
                 Subject:
                 <br />
-                <input type="text" name="subject" onChange={handleChange} />
+                <input
+                  className="input"
+                  type="text"
+                  name="subject"
+                  onChange={handleChange}
+                />
               </label>
             </p>
             <p>
               <label>
                 Message:
                 <br />
-                <textarea name="message" onChange={handleChange} />
+                <textarea
+                  className="input"
+                  name="message"
+                  onChange={handleChange}
+                />
               </label>
             </p>
+            <br />
             <p>
               <button className="button is-primary" type="submit">
                 Send
