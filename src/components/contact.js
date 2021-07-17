@@ -1,4 +1,6 @@
 import React from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import { useHasMounted } from "gatsby-theme-catalyst-core";
 
 export default function Contact() {
   return (
@@ -20,6 +22,23 @@ export default function Contact() {
             <br />
             RH11 9GX
           </p>
+          <div>
+            {typeof window !== "undefined" && (
+              <MapContainer
+                center={[51.08398886601107, -0.1929794649752272]}
+                zoom={13}
+                style={{ height: "400px" }}
+              >
+                <TileLayer
+                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={[51.08398886601107, -0.1929794649752272]}>
+                  <Popup>The green, Woodgate.</Popup>
+                </Marker>
+              </MapContainer>
+            )}
+          </div>
         </div>
         <div className="column">
           <form
