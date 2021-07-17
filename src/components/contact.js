@@ -153,7 +153,7 @@ export default function Contact() {
 
             <div className="field is-grouped">
               <div className="control">
-                <button className="button" type="submit">
+                <button className="button is-primary" type="submit">
                   Submit
                 </button>
               </div>
