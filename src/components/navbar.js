@@ -60,13 +60,13 @@ export default function Layout() {
               >
                 Contact
               </Link>
-              <Link
+              {/* <Link
                 className="navbar-item button is-primary"
                 to="/testimonials"
                 activeClassName="has-text-weight-bold is-underlined"
               >
                 Testimonials
-              </Link>
+              </Link> */}
               <a
                 href="http://www.instagram.com/jane.zanganeh"
                 target="_blank"
