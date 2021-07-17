@@ -110,7 +110,9 @@ export default function Contact() {
               </label>
             </p>
             <p>
-              <button type="submit">Send</button>
+              <button className="button is-primary" type="submit">
+                Send
+              </button>
             </p>
           </form>
         </div>
