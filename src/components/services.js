@@ -105,9 +105,8 @@ const Services = () => {
                         </header>
                         <div className="modal-card-body">
                           <iframe
-                            className="has-ratio"
-                            width="500"
-                            height="800"
+                            width="450"
+                            height="600"
                             src={url}
                             frameBorder="0"
                           />
