@@ -12,8 +12,8 @@ const IndexPage = () => {
         </div>
         <div className="hero-body is-secondary">
           <div className="columns is-vcentered">
-            <div className="column ">
-              <figure className="image">
+            <div className="column is-centered">
+              <figure className="image center">
                 <StaticImage src="../images/outdoorFitness.webp" alt="" />
               </figure>
             </div>
@@ -42,11 +42,13 @@ const IndexPage = () => {
           <div className="columns is-centered">
             <div className="column is-half has-text-centered">
               <h2 className="title ">About</h2>
-              <figure className="image is-128x128 center">
+              <figure className="image center">
                 <StaticImage
                   imgClassName="is-rounded"
                   src="../images/Major_series.webp"
                   alt="Jane and Luke"
+                  width={300}
+                  height={300}
                 />
               </figure>
               <p className="is-size-5">
