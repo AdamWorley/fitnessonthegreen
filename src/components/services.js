@@ -90,7 +90,10 @@ const Services = () => {
                         Book Now
                       </button>
                     )}
-                    <div id={"booking-modal-" + key} className="modal">
+                    <div
+                      id={"booking-modal-" + key}
+                      className="modal is-clipped"
+                    >
                       <div className="modal-background"></div>
                       <div className="modal-card">
                         <header className="modal-card-head">
@@ -105,7 +108,7 @@ const Services = () => {
                         </header>
                         <div className="modal-card-body">
                           <iframe
-                            width="450"
+                            width="100%"
                             height="600"
                             src={url}
                             frameBorder="0"
