@@ -3,44 +3,47 @@ import weights from "../images/weights.webp";
 import henchJane from "../images/henchJane.webp";
 import outdoorFitness from "../images/outdoorFitness.webp";
 
+const baseUrl =
+  "https://my.setmore.com/bookingpage/71a5ece2-2c43-458c-bcab-73b4cc97a55e/services/";
 const services = [
   {
-    title: "Online Coaching",
-    img: { src: weights, alt: "Dumbbells", width: 400, height: 400 },
-    days: [],
-    runtime: 1,
-    price: "",
-    description:
-      "Something about online coaching: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt, at fugit suscipit vero temporibus. Nihil doloremque, veritatis tempore vero ad corporis. Aliquid velit ullam voluptatum, nemo aperiam possimus assumenda.",
-    url: "",
+    key: "s86a75060eb4a45931687c0534ad7dfc0e55c65bf",
+    service_name: "One-off 1-2-1 Personal Training",
+    staff_keys: ["xxxxx"],
+    duration: 60,
+    buffer_duration: 0,
+    cost: 100,
+    currency: "USD",
+    image_url: henchJane,
+    description: "One on one pt session",
   },
   {
-    title: "Bootcamp",
-    img: {
-      src: outdoorFitness,
-      alt: "People exercising outside",
-      width: 400,
-      height: 400,
-    },
-    days: ["Wed, Sat, Sun"],
-    runtime: 1,
-    price: "Price varies",
-    description:
-      "Something about bootcamp: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt, at fugit suscipit vero temporibus. Nihil doloremque, veritatis tempore vero ad corporis. Aliquid velit ullam voluptatum, nemo aperiam possimus assumenda.",
-    // url: "http://my.setmore.com/bookingpage/71a5ece2-2c43-458c-bcab-73b4cc97a55e/class/591edd76-64b3-4839-b6a6-3bada6169586",
-    url: "",
+    key: "s6dd7c3a116d9b70301da1a1f33e175eb25db0952",
+    service_name: "Nutrition",
+    staff_keys: [],
+    duration: 20,
+    buffer_duration: 10,
+    cost: 200,
+    currency: "USD",
+    image_url: weights,
+    description: "Advice for diet and nutrition to suit you",
   },
-  {
-    title: "One-off 1-2-1 Personal Training",
-    img: { src: henchJane, alt: "Jane being hench", width: 400, height: 400 },
-    days: [],
-    runtime: 1,
-    price: "",
-    description:
-      "Something about One-off 1-2-1 Personal Training: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt, at fugit suscipit vero temporibus. Nihil doloremque, veritatis tempore vero ad corporis. Aliquid velit ullam voluptatum, nemo aperiam possimus assumenda.",
-    url: "",
-  },
+  // {
+  //   key: "None",
+  //   service_name: "None",
+  //   staff_keys: [],
+  //   duration: 20,
+  //   buffer_duration: 10,
+  //   cost: 200,
+  //   currency: "USD",
+  //   image_url: outdoorFitness,
+  //   description: "service 2 description",
+  // },
 ];
+
+function toggleModal(id) {
+  document.querySelector("#booking-modal-" + id).classList.toggle("is-active");
+}
 
 const Services = () => {
   return (
@@ -48,34 +51,74 @@ const Services = () => {
       <div className="container has-text-centered">
         <div className="columns is-centered">
           {services.map((service) => {
-            const { title, runtime, price, description, url } = service;
-            const { src, alt, width, height } = service.img;
+            const {
+              key,
+              service_name,
+              duration,
+              cost,
+              image_url,
+              description,
+            } = service;
+            const url = baseUrl + key;
             return (
-              <div className="column is-4">
+              <div key={key} className="column is-4">
                 <div className="card">
                   <div className="card-image">
                     <figure className="image">
-                      <img src={src} alt={alt} width={width} height={height} />
+                      <img
+                        src={image_url}
+                        alt={service_name}
+                        width="400"
+                        height="400"
+                      />
                     </figure>
                   </div>
                   <div className="card-content">
-                    <h2 className="title is-3">{title}</h2>
+                    <h2 className="title is-3">{service_name}</h2>
                     <h3 className="subtitle is-4">
-                      Runtime: {runtime}hrs
+                      Runtime: {duration}mins
                       <br />
-                      {price}
+                      &pound;{cost}
                     </h3>
                     <p className="is-success">{description}</p>
+                    <br />
                     {url !== undefined && url !== "" && (
-                      <a
+                      <button
                         className="button is-primary"
-                        href={url}
-                        target="_blank"
-                        rel="noreferrer"
+                        onClick={() => toggleModal(key)}
                       >
                         Book Now
-                      </a>
+                      </button>
                     )}
+                    <div id={"booking-modal-" + key} className="modal">
+                      <div className="modal-background"></div>
+                      <div className="modal-card">
+                        <header className="modal-card-head">
+                          <p className="modal-card-title has-text-white">
+                            Booking - {service_name}
+                          </p>
+                          <button
+                            className="delete"
+                            aria-label="close"
+                            onClick={() => toggleModal(key)}
+                          ></button>
+                        </header>
+                        <div className="modal-card-body">
+                          <iframe
+                            className="has-ratio"
+                            width="500"
+                            height="800"
+                            src={url}
+                            frameBorder="0"
+                          />
+                        </div>
+                        <button
+                          className="modal-close is-large"
+                          aria-label="close"
+                          onClick={() => toggleModal(key)}
+                        ></button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
