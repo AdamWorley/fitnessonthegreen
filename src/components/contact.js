@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby-link";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map } from "../components";
 
 function encode(data) {
   return Object.keys(data)
@@ -53,6 +53,7 @@ export default function Contact() {
             <br />
             RH11 9GX
           </p>
+          <Map />
           {/* <div>
             {typeof window !== "undefined" && (
               <MapContainer

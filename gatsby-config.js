@@ -1,15 +1,26 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: "Fitness on The Green",
     siteUrl: "https://www.fitonthegreen.co.uk",
     url: "https://www.fitonthegreen.co.uk",
     description: "YOUR FITNESS JOURNEY BROUGHT TO YOU LOCALLY",
+    mapboxToken: process.env.MAPBOX_API_TOKEN,
   },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "setmore-plugin",
+      options: {
+        refreshToken: process.env.SETMORE_REFRESH_TOKEN,
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
@@ -40,12 +51,6 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
-    },
-    {
-      resolve: "gatsby-plugin-react-leaflet",
-      options: {
-        linkStyles: true, // (default: true) Enable/disable loading stylesheets via CDN
-      },
     },
   ],
 };

@@ -1,89 +1,120 @@
 import React from "react";
-import weights from "../images/weights.webp";
-import henchJane from "../images/henchJane.webp";
-import outdoorFitness from "../images/outdoorFitness.webp";
+import { StaticQuery, graphql } from "gatsby";
 
-const services = [
-  {
-    title: "Online Coaching",
-    img: { src: weights, alt: "Dumbbells", width: 400, height: 400 },
-    days: [],
-    runtime: 1,
-    price: "",
-    description:
-      "Something about online coaching: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt, at fugit suscipit vero temporibus. Nihil doloremque, veritatis tempore vero ad corporis. Aliquid velit ullam voluptatum, nemo aperiam possimus assumenda.",
-    url: "",
-  },
-  {
-    title: "Bootcamp",
-    img: {
-      src: outdoorFitness,
-      alt: "People exercising outside",
-      width: 400,
-      height: 400,
-    },
-    days: ["Wed, Sat, Sun"],
-    runtime: 1,
-    price: "Price varies",
-    description:
-      "Something about bootcamp: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt, at fugit suscipit vero temporibus. Nihil doloremque, veritatis tempore vero ad corporis. Aliquid velit ullam voluptatum, nemo aperiam possimus assumenda.",
-    // url: "http://my.setmore.com/bookingpage/71a5ece2-2c43-458c-bcab-73b4cc97a55e/class/591edd76-64b3-4839-b6a6-3bada6169586",
-    url: "",
-  },
-  {
-    title: "One-off 1-2-1 Personal Training",
-    img: { src: henchJane, alt: "Jane being hench", width: 400, height: 400 },
-    days: [],
-    runtime: 1,
-    price: "",
-    description:
-      "Something about One-off 1-2-1 Personal Training: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nesciunt, at fugit suscipit vero temporibus. Nihil doloremque, veritatis tempore vero ad corporis. Aliquid velit ullam voluptatum, nemo aperiam possimus assumenda.",
-    url: "",
-  },
-];
+const baseUrl =
+  "https://my.setmore.com/bookingpage/ea817af3-1a80-4576-ab9f-f85faaab79a2/services/";
+
+function toggleModal(id) {
+  document.querySelector("#booking-modal-" + id).classList.toggle("is-active");
+}
 
 const Services = () => {
   return (
-    <section className="section container">
-      <div className="container has-text-centered">
-        <div className="columns is-centered">
-          {services.map((service) => {
-            const { title, runtime, price, description, url } = service;
-            const { src, alt, width, height } = service.img;
-            return (
-              <div className="column is-4">
-                <div className="card">
-                  <div className="card-image">
-                    <figure className="image">
-                      <img src={src} alt={alt} width={width} height={height} />
-                    </figure>
+    <StaticQuery
+      query={graphql`
+        query ServicesQuery {
+          allServices {
+            nodes {
+              id
+              key
+              duration
+              service_name
+              cost
+              image_url
+            }
+          }
+        }
+      `}
+      render={(data) => (
+        <section className="section container">
+          <h1 className="title has-text-light">Plans &amp; Services</h1>
+          <div className="container has-text-centered">
+            <div className="columns is-multiline  is-centered">
+              {data.allServices.nodes.map((service) => {
+                const {
+                  key,
+                  service_name,
+                  duration,
+                  cost,
+                  image_url,
+                  description,
+                } = service;
+                const url = baseUrl + key;
+                return (
+                  <div id={key} className="column is-4">
+                    <div className="card">
+                      <div className="card-image">
+                        <figure className="image">
+                          <img
+                            src={
+                              image_url ??
+                              `https://source.unsplash.com/random/400x400/?fitness,gym,${key}`
+                            }
+                            alt={service_name}
+                            width="400"
+                            height="400"
+                          />
+                        </figure>
+                      </div>
+                      <div className="card-content">
+                        <h2 className="title is-3">{service_name}</h2>
+                        <h3 className="subtitle is-4">
+                          Runtime: {duration}mins
+                          <br />
+                          &pound;{cost}
+                        </h3>
+                        <p className="is-success">{description}</p>
+                        <br />
+                        {url !== undefined && url !== "" && (
+                          <button
+                            className="button is-primary"
+                            onClick={() => toggleModal(key)}
+                          >
+                            Book Now
+                          </button>
+                        )}
+                        <div
+                          id={"booking-modal-" + key}
+                          className="modal is-clipped"
+                        >
+                          <div className="modal-background"></div>
+                          <div className="modal-card">
+                            <header className="modal-card-head">
+                              <p className="modal-card-title has-text-white">
+                                Booking - {service_name}
+                              </p>
+                              <button
+                                className="delete"
+                                aria-label="close"
+                                onClick={() => toggleModal(key)}
+                              ></button>
+                            </header>
+                            <div className="modal-card-body">
+                              <iframe
+                                title={service_name}
+                                width="100%"
+                                height="600"
+                                src={url}
+                                frameBorder="0"
+                              />
+                            </div>
+                            <button
+                              className="modal-close is-large"
+                              aria-label="close"
+                              onClick={() => toggleModal(key)}
+                            ></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="card-content">
-                    <h2 className="title is-3">{title}</h2>
-                    <h3 className="subtitle is-4">
-                      Runtime: {runtime}hrs
-                      <br />
-                      {price}
-                    </h3>
-                    <p className="is-success">{description}</p>
-                    {url !== undefined && url !== "" && (
-                      <a
-                        className="button is-primary"
-                        href={url}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        Book Now
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+    />
   );
 };
 
