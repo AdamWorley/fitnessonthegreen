@@ -1,6 +1,6 @@
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
+import { Link, useStaticQuery, graphql } from "gatsby";
 import { FaInstagram } from "react-icons/fa";
 
 export default function Layout() {
@@ -8,6 +8,8 @@ export default function Layout() {
     document.querySelector(".navbar-menu").classList.toggle("is-active");
     document.querySelector(".navbar-burger").classList.toggle("is-active");
   }
+
+  const { site } = useStaticQuery(query);
 
   return (
     <nav className="navbar is-primary">
@@ -68,7 +70,7 @@ export default function Layout() {
                 Testimonials
               </Link> */}
               <a
-                href="http://www.instagram.com/jane.zanganeh"
+                href={`http://www.instagram.com/${site.siteMetadata.instagram}`}
                 target="_blank"
                 rel="noreferrer"
                 className="button is-primary has-white-text"
@@ -82,3 +84,13 @@ export default function Layout() {
     </nav>
   );
 }
+
+const query = graphql`
+  query Navbar {
+    site {
+      siteMetadata {
+        instagram
+      }
+    }
+  }
+`;
