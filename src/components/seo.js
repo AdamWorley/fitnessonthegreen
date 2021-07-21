@@ -20,6 +20,10 @@ const Seo = ({ title, description, image, article }) => {
     <Helmet title={seo.title}>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
+      <link
+        href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+        rel="stylesheet"
+      />
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
