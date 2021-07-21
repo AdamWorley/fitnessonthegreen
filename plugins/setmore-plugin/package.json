@@ -1,0 +1,17 @@
+{
+  "name": "setmore-plugin",
+  "version": "0.0.1",
+  "description": "A plugin to access the setmore api for services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"No build script setup\""
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "setmore"
+  ],
+  "author": "Adam Worley <adamworley@hey.com>",
+  "license": "0BSD"
+}
