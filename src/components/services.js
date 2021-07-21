@@ -26,6 +26,7 @@ const Services = () => {
       `}
       render={(data) => (
         <section className="section container">
+          <h1 className="title has-text-light">Plans &amp; Services</h1>
           <div className="container has-text-centered">
             <div className="columns is-centered">
               {data.allServices.nodes.map((service) => {

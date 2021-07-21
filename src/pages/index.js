@@ -69,6 +69,7 @@ const IndexPage = () => {
           </div>
         </section>
         <Contact />
+
         <Services />
       </main>
     </Layout>
