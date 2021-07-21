@@ -65,13 +65,13 @@ const Services = () => {
                           <button
                             className="button is-primary"
                             onClick={() => toggleModal(id)}
-                          >
+                            onClick={() => toggleModal(key)}
                             Book Now
                           </button>
                         )}
                         <div
                           id={"booking-modal-" + id}
-                          className="modal is-clipped"
+                          id={"booking-modal-" + key}
                         >
                           <div className="modal-background"></div>
                           <div className="modal-card">
@@ -83,7 +83,7 @@ const Services = () => {
                                 className="delete"
                                 aria-label="close"
                                 onClick={() => toggleModal(id)}
-                              ></button>
+                                onClick={() => toggleModal(key)}
                             </header>
                             <div className="modal-card-body">
                               <iframe
@@ -98,7 +98,7 @@ const Services = () => {
                               className="modal-close is-large"
                               aria-label="close"
                               onClick={() => toggleModal(id)}
-                            ></button>
+                              onClick={() => toggleModal(key)}
                           </div>
                         </div>
                       </div>
