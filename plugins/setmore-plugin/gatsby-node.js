@@ -19,7 +19,6 @@ exports.sourceNodes = async (
   const BEARER_TOKEN = getTokenResponse.data.data.token.access_token;
 
   //TODO: Move keys out into config file
-  console.log("getting services using token: ", BEARER_TOKEN);
   const getServicesResponse = await axiosClient.get(
     "bookingapi/services/categories/service-category-ea817af3-1a80-4576-ab9f-f85faaab79a2",
     {
