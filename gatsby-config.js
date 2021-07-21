@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env`,
+});
+
 module.exports = {
   siteMetadata: {
     title: "Fitness on The Green",
@@ -10,6 +14,12 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "setmore-plugin",
+      options: {
+        refreshToken: process.env.SETMORE_REFRESH_TOKEN,
+      },
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
