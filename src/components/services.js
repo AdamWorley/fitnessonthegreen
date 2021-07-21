@@ -16,6 +16,7 @@ const Services = () => {
           allServices {
             nodes {
               id
+              key
               duration
               service_name
               cost
@@ -28,24 +29,27 @@ const Services = () => {
         <section className="section container">
           <h1 className="title has-text-light">Plans &amp; Services</h1>
           <div className="container has-text-centered">
-            <div className="columns is-centered">
+            <div className="columns is-multiline  is-centered">
               {data.allServices.nodes.map((service) => {
                 const {
-                  id,
+                  key,
                   service_name,
                   duration,
                   cost,
                   image_url,
                   description,
                 } = service;
-                const url = baseUrl + id;
+                const url = baseUrl + key;
                 return (
-                  <div id={id} className="column is-4">
+                  <div id={key} className="column is-4">
                     <div className="card">
                       <div className="card-image">
                         <figure className="image">
                           <img
-                            src={image_url}
+                            src={
+                              image_url ??
+                              `https://source.unsplash.com/random/400x400/?fitness,gym,${key}`
+                            }
                             alt={service_name}
                             width="400"
                             height="400"
@@ -64,14 +68,14 @@ const Services = () => {
                         {url !== undefined && url !== "" && (
                           <button
                             className="button is-primary"
-                            onClick={() => toggleModal(id)}
                             onClick={() => toggleModal(key)}
+                          >
                             Book Now
                           </button>
                         )}
                         <div
-                          id={"booking-modal-" + id}
                           id={"booking-modal-" + key}
+                          className="modal is-clipped"
                         >
                           <div className="modal-background"></div>
                           <div className="modal-card">
@@ -82,8 +86,8 @@ const Services = () => {
                               <button
                                 className="delete"
                                 aria-label="close"
-                                onClick={() => toggleModal(id)}
                                 onClick={() => toggleModal(key)}
+                              ></button>
                             </header>
                             <div className="modal-card-body">
                               <iframe
@@ -97,8 +101,8 @@ const Services = () => {
                             <button
                               className="modal-close is-large"
                               aria-label="close"
-                              onClick={() => toggleModal(id)}
                               onClick={() => toggleModal(key)}
+                            ></button>
                           </div>
                         </div>
                       </div>
