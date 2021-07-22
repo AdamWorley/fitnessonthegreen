@@ -25,6 +25,35 @@ const Map = () => {
     });
     map.addControl(new mapboxgl.NavigationControl(), "top-right");
 
+    const marker = {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-0.1929794649752272, 51.08398886601107],
+      },
+      properties: {
+        title: "The Green",
+        description: "Woodgate Pease Pottage West Sussex RH11 9GX",
+      },
+    };
+
+    var el = document.createElement("div");
+    el.className = "marker";
+
+    new mapboxgl.Marker(el)
+      .setLngLat(marker.geometry.coordinates)
+      .setPopup(
+        new mapboxgl.Popup({ offset: 25 }) // add popups
+          .setHTML(
+            "<h3>" +
+              marker.properties.title +
+              "</h3><p>" +
+              marker.properties.description +
+              "</p>"
+          )
+      )
+      .addTo(map);
+
     setMap(map);
 
     return () => map.remove();

@@ -9,8 +9,10 @@ $family-primary: $font-stack;
 $family-secondary: "forum", serif;
 
 // $title-color: $blue;
-$primary: #151c25;
+$primary: #151c25; //#6E6E70;//
 $background: #27475b;
+
+//#6E6E70
 
 $accent: #a8b279;
 
@@ -78,6 +80,27 @@ $body-background-color: $background;
   width: 50%;
 }
 
+
 #about {
   background-color: $accent;
 }
+
+// Mapbox styles
+.marker {
+  background-image: url('../images/logo.png');
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
