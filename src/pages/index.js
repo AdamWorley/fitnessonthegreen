@@ -21,7 +21,7 @@ const IndexPage = () => {
               <p className="title is-family-secondary has-text-centered is-accent">
                 YOUR FITNESS JOURNEY BROUGHT TO YOU LOCALLY
               </p>
-              <p className="subtitle has-text-centered content">
+              <p className="content">
                 Are you looking for a place to train that's walking distance
                 from your home in Pease Pottage?
                 <br />
