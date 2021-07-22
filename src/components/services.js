@@ -5,9 +5,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const baseUrl =
   "https://my.setmore.com/bookingpage/ea817af3-1a80-4576-ab9f-f85faaab79a2/services/";
 
-function toggleModal(id) {
-  document.querySelector("#booking-modal-" + id).classList.toggle("is-active");
-}
+// function toggleModal(id) {
+//   document.querySelector("#booking-modal-" + id).classList.toggle("is-active");
+// }
 
 const Services = () => {
   return (
@@ -68,46 +68,15 @@ const Services = () => {
                         <p className="is-success">{description}</p>
                         <br />
                         {url !== undefined && url !== "" && (
-                          <button
+                          <a
                             className="button is-primary"
-                            onClick={() => toggleModal(key)}
+                            href={url}
+                            target="_blank"
+                            rel="noreferrer"
                           >
                             Book Now
-                          </button>
+                          </a>
                         )}
-                        <div
-                          id={"booking-modal-" + key}
-                          className="modal is-clipped"
-                        >
-                          <div className="modal-background"></div>
-                          <div className="modal-card">
-                            <header className="modal-card-head">
-                              <p className="modal-card-title has-text-white">
-                                Booking - {service_name}
-                              </p>
-                              <button
-                                className="delete"
-                                aria-label="close"
-                                onClick={() => toggleModal(key)}
-                              ></button>
-                            </header>
-                            <div className="modal-card-body">
-                              <iframe
-                                title={service_name}
-                                loading="lazy"
-                                width="100%"
-                                height="600"
-                                src={url}
-                                frameBorder="0"
-                              />
-                            </div>
-                            <button
-                              className="modal-close is-large"
-                              aria-label="close"
-                              onClick={() => toggleModal(key)}
-                            ></button>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
