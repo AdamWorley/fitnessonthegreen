@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const baseUrl =
   "https://my.setmore.com/bookingpage/ea817af3-1a80-4576-ab9f-f85faaab79a2/services/";
@@ -20,7 +21,16 @@ const Services = () => {
               duration
               service_name
               cost
-              image_url
+              remoteImage {
+                childImageSharp {
+                  id
+                  gatsbyImageData(
+                    width: 400
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+                }
+              }
             }
           }
         }
@@ -31,25 +41,17 @@ const Services = () => {
           <div className="container has-text-centered">
             <div className="columns is-multiline  is-centered">
               {data.allServices.nodes.map((service) => {
-                const {
-                  key,
-                  service_name,
-                  duration,
-                  cost,
-                  image_url,
-                  description,
-                } = service;
+                const { key, service_name, duration, cost, description } =
+                  service;
                 const url = baseUrl + key;
+                const image = getImage(service.remoteImage);
                 return (
                   <div id={key} className="column is-4">
                     <div className="card">
                       <div className="card-image">
                         <figure className="image">
-                          <img
-                            src={
-                              image_url ??
-                              `https://source.unsplash.com/random/400x400/?fitness,gym,${key}`
-                            }
+                          <GatsbyImage
+                            image={image}
                             alt={service_name}
                             width="400"
                             height="400"

@@ -1,11 +1,12 @@
 const axios = require("axios");
 const POST_NODE_TYPE = `Services`;
+const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
 
 exports.onPreInit = () => console.log("Loaded setmore");
 
 const axiosClient = axios.create({
   baseURL: "https://developer.setmore.com/api/v1/",
-  timeout: 1000,
+  timeout: 30 * 1000, //in milliseconds
 });
 
 exports.sourceNodes = async (
@@ -48,4 +49,27 @@ exports.sourceNodes = async (
   );
 
   return;
+};
+
+// called each time a node is created
+exports.onCreateNode = async ({
+  actions: { createNode },
+  getCache,
+  createNodeId,
+  node, // the node that was just created
+}) => {
+  if (node.internal.type === POST_NODE_TYPE) {
+    const fileNode = await createRemoteFileNode({
+      // the url of the remote image to generate a node for
+      url: node.image_url,
+      getCache,
+      createNode,
+      createNodeId,
+      parentNodeId: node.id,
+    });
+
+    if (fileNode) {
+      node.remoteImage___NODE = fileNode.id;
+    }
+  }
 };
