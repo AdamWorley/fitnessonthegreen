@@ -116,10 +116,25 @@ const AboutPage = () => {
               places to explore through our common interests of all things food
               and fitness.
               <br />
-              We’ve done our fair share of fitness events now: Rough Runner
-              [Clapham Common], Rough Runner [South Downs], Commando Series
-              [Hever Castle x2], Toughest [Pippingford Park], Toughest [Oslo],
-              Toughest [Copenhagen], Spartan Series.
+              We’ve done our fair share of fitness events now:{" "}
+              <span
+                class="has-tooltip-arrow"
+                data-tooltip="Clapham Common &amp; South Downs"
+              >
+                Rough Runner
+              </span>
+              ,{" "}
+              <span class="has-tooltip-arrow" data-tooltip="Hever Castle x2">
+                Commando Series
+              </span>
+              ,{" "}
+              <span
+                class="has-tooltip-arrow"
+                data-tooltip="Pippingford Park, Oslo &amp; Copenhagen"
+              >
+                Toughest
+              </span>{" "}
+              and Spartan Series to name a few.
               <br />
               We do genuinely love food.
               <br />

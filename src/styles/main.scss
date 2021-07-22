@@ -54,6 +54,7 @@ $message-background-color: $white;
 $message-body-color: $black-ter;
 
 @import "~bulma/bulma.sass";
+@import '@creativebulma/bulma-tooltip';
 
 .is-accent {
   color: $accent !important;
