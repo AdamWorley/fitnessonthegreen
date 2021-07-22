@@ -46,7 +46,7 @@ const Services = () => {
                 const url = baseUrl + key;
                 const image = getImage(service.remoteImage);
                 return (
-                  <div id={key} className="column is-4">
+                  <div key={key} className="column is-4">
                     <div className="card">
                       <div className="card-image">
                         <figure className="image">
