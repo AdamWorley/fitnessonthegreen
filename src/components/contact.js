@@ -2,7 +2,7 @@ import React from "react";
 import { navigate } from "gatsby-link";
 import { useStaticQuery, graphql } from "gatsby";
 import { Map } from "../components";
-import { FaInstagram, FaPhone, FaEnvelope, FaMobileAlt } from "react-icons/fa";
+import { FaInstagram, FaEnvelope, FaMobileAlt } from "react-icons/fa";
 
 function encode(data) {
   return Object.keys(data)
