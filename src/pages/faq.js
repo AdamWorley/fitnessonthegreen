@@ -34,16 +34,18 @@ const FaqPage = () => {
   return (
     <Layout>
       <Navbar />
-      <main>
-        <section className="container">
+      <main className="container">
+        <section className="content">
           <h1 className="title has-text-light">FAQs</h1>
           <div className="container has-text-centered">
             {faqs.map((faq) => {
               return (
-                <div>
-                  <h1 className="title">{faq.question}</h1>
-                  <h2 className="subtitle">{faq.answer}</h2>
-                </div>
+                <article key={faq.question} className="message">
+                  <div className="message-header has-text-light">
+                    {faq.question}
+                  </div>
+                  <div className="message-body">{faq.answer}</div>
+                </article>
               );
             })}
             Any other queries, please do feel free to email us on

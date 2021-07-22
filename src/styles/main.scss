@@ -49,6 +49,10 @@ $footer-background-color: $primary;
 $body-color: $white-ter;
 $body-background-color: $background;
 
+$message-header-background-color: $primary;
+$message-background-color: $accent;
+$message-body-color: $black-ter;
+
 @import "~bulma/bulma.sass";
 
 .is-accent {
