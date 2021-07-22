@@ -48,8 +48,10 @@ const FaqPage = () => {
                 </article>
               );
             })}
-            Any other queries, please do feel free to email us on
-            contact@fitonthegreen.co.uk.
+            Any other queries, please do feel free to email us on &nbsp;
+            <a href="mailto:contact@fitonthegreen.co.uk">
+              contact@fitonthegreen.co.uk
+            </a>
           </div>
         </section>
       </main>
