@@ -94,6 +94,7 @@ const Services = () => {
                             <div className="modal-card-body">
                               <iframe
                                 title={service_name}
+                                loading="lazy"
                                 width="100%"
                                 height="600"
                                 src={url}
