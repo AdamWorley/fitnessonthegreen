@@ -57,6 +57,13 @@ export default function Layout() {
               </Link>
               <Link
                 className="navbar-item button is-primary"
+                to="/about"
+                activeClassName="has-text-weight-bold is-underlined"
+              >
+                About
+              </Link>
+              <Link
+                className="navbar-item button is-primary"
                 to="/contact"
                 activeClassName="has-text-weight-bold is-underlined"
               >
