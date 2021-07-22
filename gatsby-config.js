@@ -9,7 +9,7 @@ module.exports = {
     url: "https://www.fitonthegreen.co.uk",
     description: "YOUR FITNESS JOURNEY BROUGHT TO YOU LOCALLY",
     mapboxToken: process.env.MAPBOX_API_TOKEN,
-    instagram: "fitonthegreen",
+    instagram: "fiitonthegreen",
   },
   plugins: [
     "gatsby-plugin-sass",
