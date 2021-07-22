@@ -37,14 +37,17 @@ const FaqPage = () => {
       <main className="container">
         <section className="content">
           <h1 className="title has-text-light">FAQs</h1>
-          <div className="container has-text-centered">
+          <div className="container">
             {faqs.map((faq) => {
               return (
                 <article key={faq.question} className="message">
                   <div className="message-header has-text-light">
-                    {faq.question}
+                    <p>{faq.question}</p>
+                    {/* <button class="delete" aria-label="delete"></button> */}
                   </div>
-                  <div className="message-body">{faq.answer}</div>
+                  <div className="message-body">
+                    <p>{faq.answer}</p>
+                  </div>
                 </article>
               );
             })}
