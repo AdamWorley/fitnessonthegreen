@@ -1,6 +1,8 @@
 import React from "react";
 import { navigate } from "gatsby-link";
+import { useStaticQuery, graphql } from "gatsby";
 import { Map } from "../components";
+import { FaInstagram, FaPhone, FaEnvelope, FaMobileAlt } from "react-icons/fa";
 
 function encode(data) {
   return Object.keys(data)
@@ -9,6 +11,8 @@ function encode(data) {
 }
 
 export default function Contact() {
+  const { site } = useStaticQuery(foo);
+
   const [state, setState] = React.useState({});
 
   const handleChange = (e) => {
@@ -37,12 +41,36 @@ export default function Contact() {
     >
       <div className="columns m-4 is-vcentered">
         <div className="column is-half">
-          {/* <h2 className="title">Contact</h2>
-          <p>
-            Tel: <a href="tel:07498321545">07498 321545</a>
-          </p> */}
+          <h2 className="title">Contact Us</h2>
+          <h3 className="subtitle">
+            There's many ways you can contact us, please get in touch. <br />
+            We can't wait to hear from you!
+          </h3>
+          <p className="is-size-5">
+            <a href="tel:07498321545">
+              <FaMobileAlt />
+              &nbsp; 07498 321545
+            </a>
+          </p>
+          <p className="is-size-5">
+            <a href="mailto:contact@fitonthegreen.co.uk">
+              <FaEnvelope />
+              &nbsp; contact@fitonthegreen.co.uk
+            </a>
+          </p>
+          <p className="is-size-5">
+            <a
+              href={`http://www.instagram.com/${site.siteMetadata.instagram}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram />
+              &nbsp; @{site.siteMetadata.instagram}
+            </a>
+          </p>
+          <hr />
           <h2 className="title">Get Started</h2>
-          <p>
+          <p className="is-size-5">
             The Green at Woodgate
             <br />
             Woodgate
@@ -53,24 +81,6 @@ export default function Contact() {
             <br />
             RH11 9GX
           </p>
-          <Map />
-          {/* <div>
-            {typeof window !== "undefined" && (
-              <MapContainer
-                center={[51.08398886601107, -0.1929794649752272]}
-                zoom={13}
-                style={{ height: "400px" }}
-              >
-                <TileLayer
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker position={[51.08398886601107, -0.1929794649752272]}>
-                  <Popup>The green, Woodgate.</Popup>
-                </Marker>
-              </MapContainer>
-            )}
-          </div> */}
         </div>
         <div className="column">
           <form
@@ -169,6 +179,17 @@ export default function Contact() {
           </form>
         </div>
       </div>
+      <Map />
     </section>
   );
 }
+
+const foo = graphql`
+  query Contact {
+    site {
+      siteMetadata {
+        instagram
+      }
+    }
+  }
+`;
