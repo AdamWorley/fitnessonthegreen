@@ -63,7 +63,7 @@ const Services = () => {
                         <h3 className="subtitle is-4">
                           Runtime: {duration}mins
                           <br />
-                          &pound;{cost}
+                          {cost > 0 ? `£${cost}` : "Free"}
                         </h3>
                         <p className="is-success">{description}</p>
                         <br />
