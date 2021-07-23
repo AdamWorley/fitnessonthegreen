@@ -1,5 +1,6 @@
 import * as React from "react";
 import "../styles/main.scss";
+import { FaEnvelope } from "react-icons/fa";
 import { Layout, Navbar } from "../components";
 import terms from "../documents/terms.pdf";
 import PARQ from "../documents/PARQ.pdf";
@@ -8,7 +9,7 @@ const faqs = [
   {
     question: "Why us? ",
     answer:
-      "Well, if you’ve thought about supporting local, then why not support us. We are a local couple who live on the Woodgate development and have always talked about starting our own business but never dared take the leap. We are both very enthusiastic about fitness and helping others. Come down to one of our Bootcamp sessions or book a consultation with us and we will listen to what you need to help you achieve your goals.",
+      "Well, if you’ve thought about supporting local, then why not support us?<br/>We are a local couple who live on the Woodgate development and have always talked about starting our own business but never dared take the leap. We are both very enthusiastic about fitness and helping others.<br/>Come down to one of our Bootcamp sessions or book a consultation with us and we will listen to what you need to help you achieve your goals.",
   },
   {
     question: "Why PT?",
@@ -28,7 +29,7 @@ const faqs = [
   {
     question: "Is PT for me?",
     answer:
-      "Book a free no obligation consultation with Luke or Jane by emailing us on contact@fitonthegreen.co.uk to discuss and find out!",
+      'Book a free no obligation consultation with Luke or Jane by emailing us on <a href="mailto:contact@fitonthegreen.co.uk">contact@fitonthegreen.co.uk</a> to discuss and find out!',
   },
   {
     question: "How do I get started?",
@@ -40,7 +41,7 @@ const FaqPage = () => {
   return (
     <Layout>
       <Navbar />
-      <main className="container">
+      <main className="container mt-6">
         <section className="content">
           <h1 className="title has-text-light">FAQs</h1>
           <div className="container">
@@ -61,11 +62,16 @@ const FaqPage = () => {
                 </article>
               );
             })}
+          </div>
+        </section>
+        <section className="section">
+          <p className="is-size-4">
             Any other queries, please do feel free to email us on &nbsp;
             <a href="mailto:contact@fitonthegreen.co.uk">
-              contact@fitonthegreen.co.uk
+              <FaEnvelope />
+              &nbsp; contact@fitonthegreen.co.uk
             </a>
-          </div>
+          </p>
         </section>
       </main>
     </Layout>

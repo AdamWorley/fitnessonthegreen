@@ -7,7 +7,7 @@ const AboutPage = () => {
   return (
     <Layout>
       <Navbar />
-      <main className="container">
+      <main className="container mt-6">
         <h1 className="title has-text-light">About</h1>
         <section id="luke" className="section columns">
           <div className="column">
