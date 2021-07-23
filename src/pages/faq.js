@@ -30,6 +30,10 @@ const faqs = [
     answer:
       "Book a free no obligation consultation with Luke or Jane by emailing us on contact@fitonthegreen.co.uk to discuss and find out!",
   },
+  {
+    question: "How do I get started?",
+    answer: `It\'s really easy and we\'re here to help you with whatever you need! Just make sure to fill out the <a href=${PARQ} target="_blank" rel="noreferrer">physical fitness form</a> and check out our <a href=${terms} target="_blank" rel="noreferrer"> T&amp;Cs</a>`,
+  },
 ];
 
 const FaqPage = () => {
@@ -48,7 +52,11 @@ const FaqPage = () => {
                     {/* <button class="delete" aria-label="delete"></button> */}
                   </div>
                   <div className="message-body">
-                    <p>{faq.answer}</p>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: faq.answer,
+                      }}
+                    ></p>
                   </div>
                 </article>
               );
