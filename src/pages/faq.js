@@ -1,6 +1,8 @@
 import * as React from "react";
 import "../styles/main.scss";
 import { Layout, Navbar } from "../components";
+import terms from "../documents/terms.pdf";
+import PARQ from "../documents/PARQ.pdf";
 
 const faqs = [
   {
