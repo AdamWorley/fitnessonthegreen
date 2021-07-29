@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: "How do I get started?",
-    answer: `It\'s really easy and we\'re here to help you with whatever you need! Just make sure to fill out the <a href=${PARQ} target="_blank" rel="noreferrer">physical fitness form</a> and check out our <a href=${terms} target="_blank" rel="noreferrer"> T&amp;Cs</a>`,
+    answer: `It's really easy and we're here to help you with whatever you need! Just make sure to fill out the <a href=${PARQ} target="_blank" rel="noreferrer">physical fitness form</a> and check out our <a href=${terms} target="_blank" rel="noreferrer"> T&amp;Cs</a>`,
   },
 ];
 
