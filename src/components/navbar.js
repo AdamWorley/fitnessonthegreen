@@ -17,11 +17,11 @@ export default function Layout() {
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <StaticImage
-              src="../images/header-nav.png"
+              src="../images/banner-cropped.png"
               loading="eager"
               alt="Logo"
-              width={300}
-              height={100}
+              width={298}
+              height={120}
               placeholder="blurred"
               layout="constrained"
               imgClassName="image"
@@ -57,10 +57,24 @@ export default function Layout() {
               </Link>
               <Link
                 className="navbar-item button is-primary"
+                to="/about"
+                activeClassName="has-text-weight-bold is-underlined"
+              >
+                About
+              </Link>
+              <Link
+                className="navbar-item button is-primary"
                 to="/contact"
                 activeClassName="has-text-weight-bold is-underlined"
               >
                 Contact
+              </Link>
+              <Link
+                className="navbar-item button is-primary"
+                to="/faq"
+                activeClassName="has-text-weight-bold is-underlined"
+              >
+                FAQs
               </Link>
               {/* <Link
                 className="navbar-item button is-primary"

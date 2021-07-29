@@ -8,9 +8,9 @@ export default function Layout({ children }) {
       <Seo />
       <Meta />
       {/* <Navbar /> */}
-      <div className="Site-content">
+      <body className="Site-content">
         <div>{children}</div>
-      </div>
+      </body>
       <Footer />
     </div>
   );

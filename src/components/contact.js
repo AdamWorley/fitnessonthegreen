@@ -3,6 +3,8 @@ import { navigate } from "gatsby-link";
 import { useStaticQuery, graphql } from "gatsby";
 import { Map } from "../components";
 import { FaInstagram, FaEnvelope, FaMobileAlt } from "react-icons/fa";
+import terms from "../documents/terms.pdf";
+import PARQ from "../documents/PARQ.pdf";
 
 function encode(data) {
   return Object.keys(data)
@@ -80,6 +82,18 @@ export default function Contact() {
             West Sussex
             <br />
             RH11 9GX
+          </p>
+          <hr />
+          <h2 className="title">Documents</h2>
+          <p className="is-size-5">
+            <a href={terms} target="_blank" rel="noreferrer">
+              T&amp;Cs
+            </a>
+          </p>
+          <p className="is-size-5">
+            <a href={PARQ} target="_blank" rel="noreferrer">
+              Physical Activity Readiness Questionnaire (PAR Q)
+            </a>
           </p>
         </div>
         <div className="column">

@@ -40,7 +40,9 @@ $blue: hsl(229, 53%, 53%) !default;
 $purple: hsl(271, 100%, 71%) !default;
 $red: hsl(348, 86%, 61%) !default;
 
-$navbar-item-img-max-height: 100px;
+$link: darken($accent, 15%);
+
+$navbar-item-img-max-height: 120px;
 $navbar-background-color: $primary;
 
 $footer-padding: 2rem 1.5rem 2rem;
@@ -49,7 +51,12 @@ $footer-background-color: $primary;
 $body-color: $white-ter;
 $body-background-color: $background;
 
+$message-header-background-color: $primary;
+$message-background-color: $white;
+$message-body-color: $black-ter;
+
 @import "~bulma/bulma.sass";
+@import '@creativebulma/bulma-tooltip';
 
 .is-accent {
   color: $accent !important;
