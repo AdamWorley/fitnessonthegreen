@@ -17,11 +17,11 @@ export default function Layout() {
         <div className="navbar-brand">
           <Link className="navbar-item" to="/">
             <StaticImage
-              src="../images/header-nav.png"
+              src="../images/banner-cropped.png"
               loading="eager"
               alt="Logo"
-              width={300}
-              height={100}
+              width={298}
+              height={120}
               placeholder="blurred"
               layout="constrained"
               imgClassName="image"
