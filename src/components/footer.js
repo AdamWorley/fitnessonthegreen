@@ -17,7 +17,7 @@ export default function Layout() {
           </a>
         </p>
         <p>
-          &copy;2021 by Fitness on the Green | Created by{" "}
+          &copy;2021 by Fit on the Green | Created by{" "}
           <a href="https://adamworley.com" target="_blank" rel="noreferrer">
             Adam Worley
           </a>
