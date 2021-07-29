@@ -67,7 +67,7 @@ const Services = () => {
                         </h3>
                         <p className="is-success">{description}</p>
                         <br />
-                        {url !== undefined && url !== "" && (
+                        {/* {url !== undefined && url !== "" && (
                           <a
                             className="button is-primary"
                             href={url}
@@ -76,7 +76,7 @@ const Services = () => {
                           >
                             Book Now
                           </a>
-                        )}
+                        )} */}
                       </div>
                     </div>
                   </div>
