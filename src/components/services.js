@@ -67,16 +67,18 @@ const Services = () => {
                         </h3>
                         <p className="is-success">{description}</p>
                         <br />
-                        {/* {url !== undefined && url !== "" && (
-                          <a
-                            className="button is-primary"
-                            href={url}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            Book Now
-                          </a>
-                        )} */}
+                        {url !== undefined &&
+                          url !== "" &&
+                          service_name === "Bootcamp" && (
+                            <a
+                              className="button is-primary"
+                              href={url}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              Book Now
+                            </a>
+                          )}
                       </div>
                     </div>
                   </div>
