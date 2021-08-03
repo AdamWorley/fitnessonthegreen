@@ -16,6 +16,10 @@ const Classes = [
     cost: 6,
     duration: 60,
     service_name: "Bootcamp",
+    description: `Bootcamp aims to increase your lung capacity, endurance and strength through a combination of weight lifting, body weight exercises and running intervals.
+    Whole body workouts aiming to help you increase your general fitness, stamina and strength each week!
+    You'll have fun whilst getting closer to reaching your goals.
+    Sessions at present are outdoors (Indoor venue pending completion of Community hub - coming soon!), and will be running despite weather, unless there is a threat to health (i.e. thunder) so come down rain or shine, Jane and/or Luke will be ready to welcome you.`,
     image: "../images/barbells.jpg",
   },
 ];
@@ -32,6 +36,7 @@ const Services = () => {
               duration
               service_name
               cost
+              description
               remoteImage {
                 childImageSharp {
                   id
