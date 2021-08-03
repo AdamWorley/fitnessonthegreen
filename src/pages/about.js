@@ -25,12 +25,11 @@ const AboutPage = () => {
           <div className="column content">
             <h1 className="title has-text-light">Luke</h1>
             <p>
-              Will be primary personal trainer. Having grown up in a house-hold,
-              always watching any sport, getting fit and helping others achieve
-              their health goals has always been at the forefront of Lukes mind.
-              He listens to the clients needs and always has this at the
-              forefront of his mind to ensure the clients end goal is met.{" "}
-              <br />
+              Having grown up in a house-hold, always watching any sport,
+              getting fit and helping others achieve their health goals has
+              always been at the forefront of Lukes mind. He listens to the
+              clients needs and always has this at the forefront of his mind to
+              ensure the clients end goal is met. <br />
               Luke has a keen eye for any instabilities in movements, and won’t
               let you shy away from them. He’s known for both his understanding
               and gentle nature with clients as much so as pushing clients to
