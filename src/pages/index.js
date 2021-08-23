@@ -14,7 +14,12 @@ const IndexPage = () => {
           <div className="columns is-vcentered">
             <div className="column is-centered">
               <figure className="image center">
-                <StaticImage src="../images/outdoorFitness.webp" alt="" />
+                <StaticImage
+                  src="../images/jump.jpg"
+                  alt="Having fun with fitness"
+                  width="480"
+                  height="640"
+                />
               </figure>
             </div>
             <div className="column content is-half">
