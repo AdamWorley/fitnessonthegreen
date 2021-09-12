@@ -9,17 +9,6 @@ const IndexPage = () => {
       <section className="hero is-primary">
         <div className="hero-head">
           <Navbar />
-          <div className="columns is-vcentered mt-1">
-            <div id="banner" className="column is-centered">
-              <h2 className="title has-text-centered">
-                🎉 Bootcamp Thursday Evenings At 6.30pm Starting The 23rd
-                September 🎉
-              </h2>
-              {/* <button className="button is-primary" type="submit">
-                Find Out More!
-              </button> */}
-            </div>
-          </div>
         </div>
         <div className="hero-body is-secondary">
           <div className="columns is-vcentered">
