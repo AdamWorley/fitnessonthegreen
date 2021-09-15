@@ -1,6 +1,6 @@
-import * as React from "react";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import * as React from "react";
 import { FaInstagram } from "react-icons/fa";
 
 export default function Layout() {
@@ -13,7 +13,7 @@ export default function Layout() {
 
   return (
     <div>
-      <nav className="navbar is-primary">
+      <nav className="navbar is-primary mb-2">
         <div className="container">
           <div className="navbar-brand">
             <Link className="navbar-item" to="/">
@@ -97,9 +97,9 @@ export default function Layout() {
           </div>
         </div>
       </nav>
-      <div className="columns is-vcentered mt-1">
+      <div className="columns is-vcentered ">
         <div id="banner" className="column is-centered">
-          <h2 className="title has-text-centered has-white-text">
+          <h2 className="title has-text-centered has-text-white">
             Starting 23rd September: Bootcamp Thursday Evenings At 6.30pm 🎉
           </h2>
           {/* <button className="button is-primary" type="submit">
