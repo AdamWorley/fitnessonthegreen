@@ -1,7 +1,7 @@
-import * as React from "react";
-import "../styles/main.scss";
-import { Layout, Navbar, Services, Contact } from "../components";
 import { StaticImage } from "gatsby-plugin-image";
+import * as React from "react";
+import { Contact, Layout, Navbar, Services } from "../components";
+import "../styles/main.scss";
 
 const IndexPage = () => {
   return (
@@ -34,7 +34,7 @@ const IndexPage = () => {
                 <br />
                 Are you looking to meet some locals whilst getting fit?
                 <br />
-                Luke and I can help you get the fitness results you are looking
+                I can help you get the fitness results you are looking
                 for through 20 years of combined experience within the fitness
                 industry.
               </p>
@@ -47,22 +47,21 @@ const IndexPage = () => {
           <div className="columns is-centered">
             <div className="column is-half has-text-centered">
               <h2 className="title ">About</h2>
-              <figure className="image center">
+              {/* <figure className="image center">
                 <StaticImage
                   imgClassName="is-rounded"
-                  src="../images/Major_series.webp"
+                  src="../images/jane-collage.jpg"
                   alt="Jane and Luke"
                   width={300}
                   height={300}
                 />
-              </figure>
+              </figure> */}
               <p className="is-size-5">
                 Looking for professional, certified fitness coaches that can
                 offer you a tailor-made plan that is right for you? <br />
                 Or perhaps you're looking to meet some locals whilst training in
                 the fresh outdoors, come rain or shine? <br />
-                With almost 20 years combined experience in fitness, Luke and
-                Jane will help you reach your goals be it: longevity, health,
+                With over hald a decade of experience in fitness, Jane will help you reach your goals be it: longevity, health,
                 fat loss, muscle gain, performance, fitness, nutrition (and
                 more!) through sharing knowledge, correction of technique and
                 structured training to maximise your results.
