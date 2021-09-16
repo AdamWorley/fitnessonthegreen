@@ -61,7 +61,7 @@ const IndexPage = () => {
                 offer you a tailor-made plan that is right for you? <br />
                 Or perhaps you're looking to meet some locals whilst training in
                 the fresh outdoors, come rain or shine? <br />
-                With over hald a decade of experience in fitness, Jane will help you reach your goals be it: longevity, health,
+                With over half a decade of experience in fitness, Jane will help you reach your goals be it: longevity, health,
                 fat loss, muscle gain, performance, fitness, nutrition (and
                 more!) through sharing knowledge, correction of technique and
                 structured training to maximise your results.
