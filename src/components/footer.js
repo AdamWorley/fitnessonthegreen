@@ -18,7 +18,11 @@ export default function Layout() {
         </p>
         <p>
           &copy;2021 by Fit on the Green | Created by{" "}
-          <a href="https://adamworley.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://portfolio.adamworley.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             Adam Worley
           </a>
         </p>
