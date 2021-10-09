@@ -2,28 +2,26 @@ import * as React from "react";
 import "../styles/main.scss";
 import { FaEnvelope } from "react-icons/fa";
 import { Layout, Navbar } from "../components";
-import terms from "../documents/terms.pdf";
-import PARQ from "../documents/PARQ.pdf";
 import { useStaticQuery, graphql } from "gatsby";
 
 const FaqPage = () => {
-const faqsQuery = useStaticQuery(graphql`
+  const faqsQuery = useStaticQuery(graphql`
     {
       allContentfulFaQs {
-    edges {
-      node {
-        title
-        faqs {
-          question
-          answer {
-            childMarkdownRemark {
-              html
+        edges {
+          node {
+            title
+            faqs {
+              question
+              answer {
+                childMarkdownRemark {
+                  html
+                }
+              }
             }
           }
         }
       }
-    }
-  }
     }
   `);
 
