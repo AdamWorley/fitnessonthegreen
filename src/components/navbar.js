@@ -100,7 +100,7 @@ export default function Layout() {
       <div className="columns is-vcentered ">
         <div id="banner" className="column is-centered">
           <h2 className="title has-text-centered has-text-white">
-            Starting 23rd September: Bootcamp Thursday Evenings At 6.30pm 🎉
+            Starting 1<sup>st</sup> of February: Bootcamp Tuesday Evenings At 6.30pm 🎉
           </h2>
           {/* <button className="button is-primary" type="submit">
          Find Out More!
