@@ -66,11 +66,11 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <section className="hero is-primary">
-        <div className="hero-head">
-          <Navbar />
+      <Navbar />
+      <section className="hero">
+        <div className="hero-head ">
         </div>
-        <div className="hero-body is-secondary">
+        <div className="hero-body ">
           <div className="columns is-vcentered">
             <div className="column is-centered">
               <figure className="image center">
@@ -83,7 +83,7 @@ const IndexPage = () => {
               </figure>
             </div>
             <div className="column content is-half">
-              <p className="title is-family-secondary has-text-centered is-accent">
+              <p className="title is-family-secondary has-text-centered has-text-white">
                 {hero.headline}
               </p>
               <p className="content" style={{ whiteSpace: "pre-line" }}>
@@ -104,20 +104,11 @@ const IndexPage = () => {
                   ).title
                 }
               </h2>
-              {/* <figure className="image center">
-                <StaticImage
-                  imgClassName="is-rounded"
-                  src="../images/jane-collage.jpg"
-                  alt="Jane and Luke"
-                  width={300}
-                  height={300}
-                />
-              </figure> */}
               <p className="is-size-5">
                 {aboutSectionRichText &&
                   renderRichText(aboutSectionRichText, options)}
               </p>
-              <a className="button" href="#contact">
+              <a className="button is-primary" href="#contact">
                 Contact
               </a>
             </div>
