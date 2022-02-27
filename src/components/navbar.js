@@ -18,7 +18,7 @@ export default function Layout() {
           <div className="navbar-brand">
             <Link className="navbar-item" to="/">
               <StaticImage
-                src="../images/banner-cropped.png"
+                src="../images/logo.jpeg"
                 loading="eager"
                 alt="Logo"
                 width={298}
@@ -97,16 +97,6 @@ export default function Layout() {
           </div>
         </div>
       </nav>
-      <div className="columns is-vcentered ">
-        <div id="banner" className="column is-centered">
-          <h2 className="title has-text-centered has-text-white">
-            Starting 1<sup>st</sup> of February: Bootcamp Tuesday Evenings At 6.30pm 🎉
-          </h2>
-          {/* <button className="button is-primary" type="submit">
-         Find Out More!
-       </button> */}
-        </div>
-      </div>
     </div>
   );
 }
