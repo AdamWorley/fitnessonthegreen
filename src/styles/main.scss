@@ -9,12 +9,8 @@ $family-primary: $font-stack;
 $family-secondary: "forum", serif;
 
 // $title-color: $blue;
-$primary: #151c25; //#6E6E70;//
-$background: #27475b;
-
-//#6E6E70
-
-$accent: #a8b279;
+$primary: #326c18; //#6E6E70;//
+$accent: #abd1b2;
 
 $black: hsl(0, 0%, 4%) !default;
 $black-bis: hsl(0, 0%, 7%) !default;
@@ -43,13 +39,13 @@ $red: hsl(348, 86%, 61%) !default;
 $link: darken($accent, 15%);
 
 $navbar-item-img-max-height: 120px;
-$navbar-background-color: $primary;
+$navbar-background-color: $white;
 
 $footer-padding: 2rem 1.5rem 2rem;
 $footer-background-color: $primary;
 
 $body-color: $white-ter;
-$body-background-color: $background;
+$body-background-color: $black-bis;
 
 $message-header-background-color: $primary;
 $message-background-color: $white;
@@ -89,7 +85,8 @@ $message-body-color: $black-ter;
 
 
 #about {
-  background-color: $accent;
+  background-color: #FFF;
+  color: $black;
 }
 
 // Mapbox styles

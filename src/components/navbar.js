@@ -13,7 +13,7 @@ export default function Layout() {
 
   return (
     <div>
-      <nav className="navbar is-primary mb-2">
+      <nav className="navbar">
         <div className="container">
           <div className="navbar-brand">
             <Link className="navbar-item" to="/">
@@ -21,8 +21,8 @@ export default function Layout() {
                 src="../images/logo.jpeg"
                 loading="eager"
                 alt="Logo"
-                width={298}
-                height={120}
+                width={679}
+                height={480}
                 placeholder="blurred"
                 layout="constrained"
                 imgClassName="image"
