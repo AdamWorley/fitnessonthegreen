@@ -94,7 +94,7 @@ const IndexPage = () => {
         </div>
       </section>
       <main>
-        <section id="about" className="section">
+        <section id="about-section" className="section">
           <div className="columns is-centered">
             <div className="column is-half has-text-centered">
               <h2 className="title ">

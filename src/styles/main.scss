@@ -83,12 +83,6 @@ $message-body-color: $black-ter;
   width: 50%;
 }
 
-
-#about {
-  background-color: #FFF;
-  color: $black;
-}
-
 // Mapbox styles
 .marker {
   background-image: url('../images/logo.png');
@@ -108,7 +102,35 @@ $message-body-color: $black-ter;
   font-family: 'Open Sans', sans-serif;
 }
 
+.has-white-background{
+  background-color: $white;
+}
 
 #banner {
   background-color: #6E6E70;
 }
+
+#about {
+  background-color: $primary;
+  color: $black;
+}
+
+#about a {
+color: $accent;
+}
+
+#about-section {
+  background-color: #FFF;
+  color: $black;
+}
+
+
+
+
+// q::before
+// {
+//   content: "\201C";
+//   display: block;
+//   font-size: 2rem;
+//   font-family: Georgia, 'Times New Roman', Times, serif
+// }
