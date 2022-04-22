@@ -7,7 +7,8 @@ const AboutPage = () => {
   return (
     <Layout>
       <Navbar />
-      <main className="container mt-6">
+      <div id="about">
+      <main  className="container pt-6">
         {/* <h1 className="title has-text-light">About Jane</h1> */}
         <section id="jane" className="section columns">
           <div className="column">
@@ -22,8 +23,8 @@ const AboutPage = () => {
               imgClassName="image"
             />
           </div>
-          <div className="column">
-            <h1 className="title has-text-light">About Jane</h1>
+          <div className="column has-text-weight-semibold">
+            <h1 className="title has-text-black">About Jane</h1>
             <p>Jane listens to the clients needs and always has this at the forefront of her mind to ensure the clients end goal is met.<br />
               Jane has a keen eye for any instabilities in movements, and won’t let you shy away from them as she is quite the technique fiend.<br />
               She will ensure you are pushing to limits you never thought you would achieve before, by assessing your every move in a session and capabilities, striving to help you become 1% fitter and healthier each day, and will only take on clients who align with her skillset.
@@ -60,6 +61,7 @@ const AboutPage = () => {
           </div>
         </section>
       </main>
+      </div>
     </Layout>
   );
 };

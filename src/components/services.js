@@ -99,7 +99,7 @@ const Services = () => {
               {data.allServices.nodes.map((service) => {
                 const { key, service_name, duration, cost, description } =
                   service;
-                const url = baseUrl + "services/" + key;
+                // const url = baseUrl + "services/" + key;
                 const image = getImage(service.remoteImage);
                 return (
                   <div key={key} className="column is-4">

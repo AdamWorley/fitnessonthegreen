@@ -13,16 +13,16 @@ export default function Layout() {
 
   return (
     <div>
-      <nav className="navbar is-primary mb-2">
+      <nav className="navbar">
         <div className="container">
           <div className="navbar-brand">
             <Link className="navbar-item" to="/">
               <StaticImage
-                src="../images/banner-cropped.png"
+                src="../images/logo.jpeg"
                 loading="eager"
                 alt="Logo"
-                width={298}
-                height={120}
+                width={679}
+                height={480}
                 placeholder="blurred"
                 layout="constrained"
                 imgClassName="image"
@@ -77,6 +77,13 @@ export default function Layout() {
                 >
                   FAQs
                 </Link>
+                <Link
+                  className="navbar-item button is-primary"
+                  to="/testimonials"
+                  activeClassName="has-text-weight-bold is-underlined"
+                >
+                  Testimonials
+                </Link>
                 {/* <Link
                 className="navbar-item button is-primary"
                 to="/testimonials"
@@ -97,16 +104,6 @@ export default function Layout() {
           </div>
         </div>
       </nav>
-      <div className="columns is-vcentered ">
-        <div id="banner" className="column is-centered">
-          <h2 className="title has-text-centered has-text-white">
-            Starting 1<sup>st</sup> of February: Bootcamp Tuesday Evenings At 6.30pm 🎉
-          </h2>
-          {/* <button className="button is-primary" type="submit">
-         Find Out More!
-       </button> */}
-        </div>
-      </div>
     </div>
   );
 }
