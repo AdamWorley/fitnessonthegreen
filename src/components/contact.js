@@ -15,27 +15,6 @@ function encode(data) {
 export default function Contact() {
   const { site } = useStaticQuery(foo);
 
-  const [state, setState] = React.useState({});
-
-  const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute("action")))
-      .catch((error) => alert(error));
-  };
-
   return (
     <section
       id="contact"
@@ -97,20 +76,13 @@ export default function Contact() {
           </p>
         </div>
         <div className="column">
-          <form
-            name="contact"
-            method="post"
-            action="/"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-          >
+        <form method="POST" action="/api/submit" encType="multipart/form-data">
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value="contact" />
             <p hidden>
               <label className="label">
-                Don’t fill this out:{" "}
-                <input name="bot-field" onChange={handleChange} />
+                Don't fill this out:
+                <input name="first-name" />
               </label>
             </p>
             <p>
@@ -120,8 +92,7 @@ export default function Contact() {
                 <input
                   className="input"
                   type="text"
-                  name="name"
-                  onChange={handleChange}
+                  name="name"                 
                 />
               </label>
             </p>
@@ -132,8 +103,7 @@ export default function Contact() {
                 <input
                   className="input"
                   type="text"
-                  name="address"
-                  onChange={handleChange}
+                  name="address"                 
                 />
               </label>
             </p>
@@ -144,8 +114,7 @@ export default function Contact() {
                 <input
                   className="input"
                   type="email"
-                  name="email"
-                  onChange={handleChange}
+                  name="email"                 
                 />
               </label>
             </p>
@@ -156,8 +125,7 @@ export default function Contact() {
                 <input
                   className="input"
                   type="tel"
-                  name="phone"
-                  onChange={handleChange}
+                  name="phone"                 
                 />
               </label>
             </p>
@@ -168,8 +136,7 @@ export default function Contact() {
                 <input
                   className="input"
                   type="text"
-                  name="subject"
-                  onChange={handleChange}
+                  name="subject"                 
                 />
               </label>
             </p>
@@ -179,8 +146,7 @@ export default function Contact() {
                 <br />
                 <textarea
                   className="textarea"
-                  name="message"
-                  onChange={handleChange}
+                  name="message"                 
                 />
               </label>
             </p>
