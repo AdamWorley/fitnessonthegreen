@@ -49,7 +49,7 @@ export async function onRequestPost({ request }) {
                             },
                         ],
                         from: {
-                            email: `no-reply@https://fitonthegreen.co.uk/`,
+                            email: `no-reply@fitonthegreen.co.uk`,
                             name: `No-Reply Fit on the Green `,
                         },
                         subject: `New ${output.subject} Submitted to Fit on the Green`,

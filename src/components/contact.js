@@ -6,12 +6,6 @@ import { FaInstagram, FaEnvelope, FaMobileAlt } from "react-icons/fa";
 import terms from "../documents/terms.pdf";
 import PARQ from "../documents/PARQ.pdf";
 
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-}
-
 export default function Contact() {
   const { site } = useStaticQuery(foo);
 
