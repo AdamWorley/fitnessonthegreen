@@ -37,14 +37,14 @@ export async function onRequestPost({ request }) {
                         personalizations: [
                             {
                                 to: [
-                                    // {
-                                    //     email: `jane@fitonthegreen.co.uk`,
-                                    //     name: `Jane`,
-                                    // },
-                                    {
-                                      email: `adamworley@hey.com`,
-                                      name: `Adam`,
+                                  {
+                                      email: `jane@fitonthegreen.co.uk`,
+                                      name: `Jane`,
                                   }
+                                  //{
+                                  //     email: `adamworley@hey.com`,
+                                  //     name: `Adam`,
+                                  // }
                                 ],
                             },
                         ],
